@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+   <head>
+      <meta charset="UTF-8">
+      <title>Competition</title>
+      <!-- Linking the css file -->
+      <link rel="stylesheet" href="styles.css">
+      <!-- Linking the favicon -->
+      <!-- Image Source: https://www.iconspedia.com/icon/blue-heart-726.html -->
+      <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+      <!-- Importing google fonts -->
+      <!-- Code Source: https://fonts.google.com/ -->
+      <style> @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Bungee+Inline&family=Fredoka+One&family=Titan+One&family=Varela+Round&display=swap');</style>
+   </head>
+   <body>
+      <header>
+         <div>
+            <h1>The Amazing World of Gumball</h1>
+         </div>
+      </header>
+      <!-- The div tags are used to centre the navigation bar -->
+      <div>
+         <!-- Navigation links to access every page on the website -->
+         <nav>
+            <a href="index.html">Home</a>
+            <a href="resources.html">Resources</a>
+            <a href="competition.html">Competition</a>
+            <a href="faq.html">FAQs</a>
+            <a href="contact.html">Contact</a>
+         </nav>
+      </div>
+      <main>
+         <article>
+            <h2>Competition Information</h2>
+            <!-- paragraph explaining that there is a monthly competition for fans to enter -->
+            <p>This website hosts a monthly competition for fans to enter.
+                Every month we give away exclusive merchandise only
+               available at The Amazing World of Gumball store. Make sure to enter by the 10th of each month to ensure
+                 your entry is counted. Don't forget to upload a photo. Good luck!
+            </p>
+            <!-- Image Source: https://theamazingworldofgumball.fandom.com/f/p/3216483626778700927 -->
+            <img src="images/store.jpg" alt="Photo of The Amazing World of Gumball store"
+               title="The Amazing World of Gumball store" width="500" height="400">
+         </article>
+         <article>
+            <h2>Competition Form</h2>
+            <form method="post" action="https://webdevcit.com/displayvalues.php" target="_blank">
+               <!-- Getting input for first name which is required -->
+               <p>
+                  <label>First name: <input type="text" name="firstName" required autocomplete="on"></label>
+               </p>
+               <!-- Getting input for last name which is required -->
+               <p>
+                  <br> <!-- Line break -->
+                  <label>Last name: <input type="text" name="lastName" required autocomplete="on"></label>
+               </p>
+               <!-- Getting input for phone which is required -->
+               <p>
+                  <br> <!-- Line break -->
+                  <label>Telephone Number: <input type="tel" id="phone" name="phone" required autocomplete="on"></label>
+               </p>
+               <!-- Getting input for email which is required -->
+               <p>
+                  <br> <!-- Line break -->
+                  <label>Email Address: <input type="email" id="email" name="email" required autocomplete="on"></label>
+               </p>
+               <p>
+                  <!-- Getting input for Preferred Method of Contact through a drop down menu -->
+                  <br> <!-- Line break -->
+                  <label for="Contact_preference">Preferred Method of Contact:</label>
+                  <select id="Contact_preference" name="Contact_preference">
+                     <option value="email">Email</option>
+                     <option value="textMessage">Text Message</option>
+                     <option value="whatsapp">Whatsapp</option>
+                  </select>
+               </p>
+               <!-- Getting the users date of birth through a date picker -->
+               <p>
+                  <label for="birthday">What is your date of birth:</label>
+                  <input type="date" id="birthday" name="birthday">
+                  <br> <!-- Line break -->
+               </p>
+               <!-- Using fieldset and legend for accessibility -->
+               <fieldset>
+                  <legend>Interest in receiving updates:</legend>
+                  <p>
+                     <!-- Checkboxes used for user to register interest in receiving updates -->
+                     <label><input type="radio" name="updates" value="yes"> Yes</label>
+                     <!-- Default No selected (for GDPR purposes) -->
+                     <label><input type="radio" name="updates" value="no" checked> No</label>
+                  </p>
+               </fieldset>
+               <p>
+                  <br> <!-- Line break -->
+                  <!-- Text field used for user to type about their favourite episode -->
+                  <label>Favourite Episode:<br>
+                  <textarea name="favEpisode" placeholder="Describe your favourite episode here" cols="80" rows="5"></textarea>
+                  </label>
+               </p>
+               <!-- Using fieldset and legend for accessibility -->
+               <fieldset>
+                  <!-- Check box used for user to choose their favourite character -->
+                  <legend>Favourite Character:</legend>
+                  <p>
+                     <label><input type="radio" name="favCharacter" value="gumballWatterson"> Gumball Watterson</label>
+                     <label><input type="radio" name="favCharacter" value="darwinWatterson"> Darwin Watterson</label>
+                     <label><input type="radio" name="favCharacter" value="bananaJoe"> Banana Joe </label>
+                     <label><input type="radio" name="favCharacter" value="marvinFinklehimer"> Marvin Finklehimer</label>
+                  </p>
+               </fieldset>
+               <p>
+                  <br> <!-- Line break -->
+                  <!-- Option for a user to upload a picture via file submission control -->
+                  <label>Submit a photo <input type="file" id="file" name="file"></label>
+               </p>
+               <p>
+                  <!-- Submit button for the form with an image -->
+                  <button type="submit">
+                     <!-- Image source: https://www.iconspedia.com/ -->
+                     <img src="images/Tick.png" alt="Submit" width="48" height="48">
+                     <br> <!-- Line break -->
+                     Click to send
+                  </button>
+                  <!-- Reset button for the form with an image -->
+                  <button type="reset">
+                     <!-- Image source: https://www.iconspedia.com/ -->
+                     <img src="images/shred.png" alt="Reset" width="48" height="48">
+                     <br>
+                     Click to reset
+                  </button>
+               </p>
+            </form>
+         </article>
+      </main>
+      <footer>
+         <hr>
+         <small>
+            The Amazing World of Gumball is a registered copyright &copy; of Cartoon Network 2022
+            <br>     <!-- Line Break -->
+            This website is not affiliated with Cartoon Network.
+            <br>     <!-- Line Break -->
+            Background Image by
+            <a href="https://www.freepik.com/free-photo/shapes-made-with-blue-orange-card-paper_3667523.htm#query=texture%20background&position=11&from_view=keyword">Freepik</a>
+            <br>     <!-- Line Break -->
+            <a href="mailto:ciara.looney@mycit.ie">ciara.looney@mycit.ie</a>
+         </small>
+      </footer>
+   </body>
+</html>

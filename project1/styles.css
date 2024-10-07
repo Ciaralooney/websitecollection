@@ -1,0 +1,287 @@
+body	{
+	/* Setting the background image */
+	background-image: url("images/background.jpg");
+	background-size: contain;
+	/* Setting the font colour */
+	color: black;
+	/* Setting the font size */
+	font-size: 100%;
+	/* Setting the font type */
+	font-family: 'Varela Round', serif;
+	/* Setting the padding */
+	padding: 30px;
+	}
+	
+	
+h2	{
+	/* Setting the background colour */
+	background-color: #A56FAE;
+	/* Setting the font colour */
+	color: #4F4350;
+	/* Setting the type */
+	font-family: 'Bubblegum Sans', 'Fredoka One', sans-serif;
+	/* Centering the text */
+	text-align: center;
+	}
+		
+h3	{
+	/* Setting the background colour */
+	background-color: #fa8934;
+	/* Setting the font colour */
+	color: #866194;
+	/* Setting the font type */
+	font-family: 'Nabla', cursive;
+	}
+
+/* Centering the text in articles  */	
+article {
+	text-align: center;
+}
+
+/* Making description terms have bold font */
+dt	{
+	font-weight: bold;
+	}
+	
+/* Setting text tagged as small be 20% smaller than regular text and bold */
+small { 
+	font-weight: bold;
+	font-size: 80%;
+ }
+ 
+/* Navigation button styling  */
+nav a {
+	display: inline-block;
+	/* Setting the background colour */
+	background-color: #EE7F9E;
+	/* Removing underlines from links */
+	text-decoration: none;
+	/* Creatigng a large border */
+	border: 1px outset;
+	/* Setting padding and margin size */
+	margin: 0.625em 0 0.625em 0;
+	padding: 0.3125em;
+	/* Creating border and width  */
+	border-radius: 15px 15px 15px 15px;
+	width: 6em;
+	clear: left;
+	/* Making font bold  */
+	font-weight: bold;
+	/* Setting the type of font, including some backup fonts */
+	font-family: 'Fredoka One', sans-serif, cursive;
+	/* Centering the text */
+	text-align: center;
+	}
+	
+div {
+	/* Centering the text */
+	text-align: center;
+}
+
+main{
+	/* Setting the background colour */
+	background-color: #7dd1f5;
+	}
+
+/* creating a pseudo-element to style layout of table*/
+main::after{
+	display: block;
+	clear: left;
+	content:"";
+	}
+	
+header {
+	/* Setting the type of font for the header, including some backup fonts */
+	font-family: 'Bungee Inline','Titan One', cursive;
+	/* Centering the text */
+	text-align: center;
+	/* Setting the background colour */
+	background-color: #2CB5E6;
+	/* Setting the padding and margin */
+	padding: 1px;
+	margin: 25px;
+	/* Setting the text colour */
+	color: #00303B;
+	/* Making the header slightly opaque*/
+	opacity: 0.9;
+	/* Setting the width of the header */
+	width: 60%;
+	/* Centering the header */
+	margin-left: auto;
+    margin-right: auto;
+	}
+
+#cols-group {
+	width: 100%;
+	margin: auto;
+	/* Using Flexbox to ensure columns are equal height */
+	display: flex;
+	}
+
+#cols-group::after {
+	display: block;
+	clear: left;
+	content:"";
+}
+
+.inner-cols {
+	/* Using Flexbox to ensure columns are equal height */
+	flex: 1 0 auto;
+	width: 23%;
+	text-align: center;
+	border: dotted orange 2px;
+	margin-bottom: 1em;
+}
+
+.image-cols {
+	/* Using Flexbox to ensure columns are equal height */
+	flex: 1 0 auto;
+	width: 25%;
+}
+
+footer {
+clear: left;
+	}
+
+/* create a class called cat */
+.cat { 
+	/* Setting font for the class */
+	font-family: "Snap ITC", serif;
+	/* Setting unique colours for the class */
+	background: #55d6ed;
+	color: white;
+	/* Setting border and width for the class */
+	border-radius: 15px 15px 15px 15px;
+	width: 30%;
+	}
+	
+/* create a class called rabbit */
+.rabbit { 
+	/* Setting font for the class */
+	font-family: "Snap ITC", serif;
+	/* Setting unique colours for the class */
+	background: #fac8fa; 
+	color: white;
+	/* Setting border and width for the class */
+	border-radius: 15px 15px 15px 15px;
+	width: 30%;
+	}
+	
+/* create a class called fish */
+.fish { 
+	/* Setting font for the class */
+	font-family: "Snap ITC", serif;
+	/* Setting unique colours for the class */
+	background: #faa843; 
+	color: white;
+	/* Setting border and width for the class */
+	border-radius: 15px 15px 15px 15px;
+	width: 30%;
+	}
+	
+.image{
+
+display: inline-block;
+
+}
+	
+/* style for unvisited link using pseudo-classes */
+a:link {
+	/* removing the underlines on links */	
+	text-decoration: none;
+	/* adding colour */
+	color: #061799;
+		}
+
+/* colour for a visited link using pseudo-classes */
+a:visited {
+	/* removing the underlines on links */	
+	text-decoration: none;
+	/* adding colour */
+	color: #d62dc0;
+		}
+
+/* style when mouse is hovering over link using pseudo-classes*/
+a:hover {
+	/* removing the underlines on links */	
+	text-decoration: none;
+	/* adding colour */
+	color: #ff830f;
+		}
+		
+/* style for unvisited link on navigation bar using pseudo-classes*/
+nav a:link {
+	/* removing the underlines on links */
+	text-decoration: none;
+		}
+
+/* colour for a visited link on navigation bar using pseudo-classes*/
+nav a:visited {
+	color: #36271a;
+		}
+
+/* colour and a border added when mouse is hovering over link on navigation bar using pseudo-classes*/
+nav a:hover {
+	color: #00776D;
+	border: 2px inset;
+	/* change to lighter background colour */
+	background-color: #f198b1;
+		}
+
+/* Adding stars for bullet points for unordered lists */
+/* Image Source: https://www.kindpng.com/imgv/ToTJRo_cute-star-png-page-cute-star-clipart-transparent/*/
+ul {
+	 list-style-image: url('images/star.png');
+}	
+
+/* For ordered lists:  */
+ol {
+	/* Centering text */
+	text-align: center;
+	/* Alligning the numbers to be next to centered text */
+	list-style-position: inside;
+}
+
+/* Use focus pseudo-class to give visual clue when input is selected in form*/
+input:focus { 
+	/* Changing colour to grey */
+	background: #e6e6e6;
+}
+
+/* Hilighting irish language in green */
+:lang(ie){color: #097a05;}
+
+/* change screen settings when screen max width is 768px */
+@media only screen and (max-width: 768px) {
+html { margin: 0; }
+body {margin: auto;}
+
+main nav { 
+float: none;
+width: 100%;
+padding: 0.5em;
+text-align: center;	
+	}
+	
+main nav a {display: inline;}
+}
+
+/* change screen settings when screen max width is 480px */
+@media only screen and (max-width: 480px) {
+html {margin: 0;}
+body {width: auto;}
+
+figure { 
+float: none;
+padding: 0;
+margin: 0;
+text-align: center;
+		}
+
+main nav a {
+display: block;
+font-size: 120%;
+margin:0;
+border-bottom: 2px ridge #00005D;
+}
+}

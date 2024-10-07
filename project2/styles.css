@@ -1,0 +1,137 @@
+/* Setting all fonts to this font style unless specified otherwise */
+* {
+	font-family: "Varela Round", Arial, sans-serif;
+}
+body {
+	/* Setting the background image */
+	/* Image Source: https://www.pixiv.net/en/artworks/76700217 */
+	background-image: url("images/background.jpg");
+	/* Stopping the background image from zooming in */
+	background-size: contain;
+	/* Setting the padding */
+	padding: 30px;
+}
+h1{
+	/* Setting the type of font for the header, including some backup fonts */
+	font-family: 'Fredoka One', cursive;
+	color: navy;
+}
+h2 {
+	/* Setting the font colour */
+	color: #A56FAE;
+	/* Setting the font type */
+	font-family: 'Bubblegum Sans', sans-serif;
+	/* Centering the text */
+	text-align: center;
+}
+nav a {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: block;
+	width: 100px;
+}
+#nav {
+	/* Setting the font type */
+	font-family: "Arial Rounded MT", serif;
+	display: block;
+	/* Setting a thick border */
+	border-bottom: 1px solid;
+	background-color: white;
+	color: blue;
+	padding: 7px;
+	margin: 25px;
+	border: 1px outset;
+	border-width: medium;
+	clear: left;
+	/* Changes how long the button is */
+	width: 70%
+}
+.subMenu {
+	/* Setting the font type */
+	font-family: "Arial Rounded MT", serif;
+	background-color: #4479ff;
+	color: white;
+	display: block;
+	/* Setting a thick border */
+	border-bottom: 1px solid;
+	padding: 4px;
+	margin: 8px;
+	border: 1px outset;
+	border-width: medium;
+	/* Changes how long the button is */
+	width: 40%;
+	/* Aligning text to the centre */
+	text-align: center;
+	/* Removing text underlining */
+	text-decoration: none;
+	/* Aligning the sub menus to be centered to the main menu */
+	margin-left: 20%;
+}
+/* Hiding the navigation menu initially */
+#expandingMenu {
+	display: none;
+}
+/* Centering the title */
+header {
+	text-align: center;
+}
+/* Floating the startGame image to the right */
+#startGame {
+	float: right;
+}
+/* Setting the main background colour to be blue */
+article {
+	background-color: lightblue;
+}
+#cols-group {
+	width: 100%;
+	margin: auto;
+	/* Using Flexbox to ensure columns are equal height */
+	display: flex;
+}
+#cols-group::after {
+	display: block;
+	clear: left;
+	content:"";
+}
+.inner-col1, .inner-col2 {
+	/* Using Flexbox to ensure columns are equal height */
+	flex: 1 0 auto;
+	text-align: center;
+	border: dotted orange 2px;
+	margin-bottom: 1em;
+}
+/* Setting the width for the first column */
+.inner-col1 {
+	width: 23%;
+}
+/* Setting the width for the second column */
+.inner-col2 {
+	width: 75%;
+}
+#biography {
+	/* Centres the box and gives it a small margin */
+	margin: 5px auto;
+	/* Creates the border */
+	border: 3px solid #408E7E;
+	width: 85%;
+	padding: 5px;
+	/* Makes sure the photo is also in the border */
+	content: "";
+	clear: both;
+	display: table;
+}
+/* Adds whitespace before the hamtaro photo */
+#hamtaro {
+	margin-top: 70px;
+}
+/* Setting text tagged as small be 20% smaller than regular text */
+small {
+	font-size: 80%;
+}
+footer {
+	/* Setting the footer background colour to be blue */
+	background-color: lightblue;
+	clear: left;
+}

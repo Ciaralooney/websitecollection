@@ -1,0 +1,216 @@
+body {
+    background-color: #F2FBE0;
+    background-size: contain;
+    /* Setting the font colour */
+    color: #605B56;
+    /* Setting the font size */
+    font-size: 100%;
+    /* Setting the font type */
+    font-family: 'Varela Round', serif;
+    /* Setting the padding */
+    padding: 30px;
+}
+
+
+h2, h3 {
+    /* Setting the background colour */
+    background-color: #ACC18A;
+    /* Setting the font colour */
+    color: #837A75;
+    /* Setting the type */
+    font-family: 'Bubblegum Sans', 'Fredoka One', sans-serif;
+    /* Centering the text */
+    text-align: center;
+}
+
+
+/* Centering the text in articles  */
+div, article {
+    text-align: center;
+}
+
+/* Ensure bullet points are centered */
+ul {
+    list-style-position: inside;
+}
+
+
+/* Navigation button styling  */
+nav a {
+    display: inline-block;
+    /* Setting the background colour */
+    background-color: #DAFEB7;
+    /* Removing underlines from links */
+    text-decoration: none;
+    /* Creatigng a large border */
+    border: 1px outset;
+    /* Setting padding and margin size */
+    margin: 0.625em 0 0.625em 0;
+    padding: 0.3125em;
+    /* Creating border and width  */
+    border-radius: 15px 15px 15px 15px;
+    width: 6em;
+    clear: left;
+    /* Making font bold  */
+    font-weight: bold;
+    /* Setting the type of font, including some backup fonts */
+    font-family: 'Fredoka One', sans-serif, cursive;
+    /* Centering the text */
+    text-align: center;
+}
+
+
+/* creating a pseudo-element to style layout of table*/
+main::after {
+    display: block;
+    clear: left;
+    content: "";
+}
+.image-cols img {
+     width: 100%; /* image fills 100% of its container's width */
+     height: auto;
+ }
+
+header {
+    /* Setting the type of font for the header, including some backup fonts */
+    font-family: 'Titan One', cursive;
+    /* Centering the text */
+    text-align: center;
+    /* Setting the background colour */
+    background-color: #FFD2FC;
+    /* Setting the padding and margin */
+    padding: 1px;
+    margin: 25px;
+    /* Setting the text colour */
+    color: #605B56;
+}
+
+#cols-group {
+    width: 100%;
+    margin: auto;
+    /* Using Flexbox to ensure columns are equal height */
+    display: flex;
+}
+
+.inner-cols {
+    width: 23%;
+    text-align: center;
+    border: dotted orange 2px;
+    margin-bottom: 1em;
+}
+
+.image-cols {
+    width: 25%;
+}
+
+.inner-cols, .image-cols {
+    /* Using Flexbox to ensure columns are equal height */
+    flex: 1 0 auto;
+    min-width: 0;
+}
+
+/* style for unvisited link using pseudo-classes */
+a:link {
+    /* removing the underlines on links */
+    text-decoration: none;
+    /* adding colour */
+    color: #061799;
+}
+
+/* colour for a visited link using pseudo-classes */
+a:visited {
+    /* removing the underlines on links */
+    text-decoration: none;
+    /* adding colour */
+    color: #d62dc0;
+}
+
+/* style when mouse is hovering over link using pseudo-classes*/
+a:hover {
+    /* removing the underlines on links */
+    text-decoration: none;
+    /* adding colour */
+    color: #ff830f;
+}
+
+
+
+/* style for unvisited link on navigation bar using pseudo-classes*/
+nav a:link {
+    /* removing the underlines on links */
+    text-decoration: none;
+}
+
+/* colour for a visited link on navigation bar using pseudo-classes*/
+nav a:visited {
+    color: #36271a;
+}
+
+/* colour and a border added when mouse is hovering over link on navigation bar using pseudo-classes*/
+nav a:hover {
+    color: #00776D;
+    border: 2px inset;
+    /* change to lighter background colour */
+    background-color: #f198b1;
+}
+
+
+/* change screen settings when screen max width is 768px */
+@media only screen and (max-width: 768px) {
+    html {
+        margin: 0;
+    }
+
+    body {
+        margin: auto;
+    }
+
+    main nav {
+        float: none;
+        width: 100%;
+        padding: 0.5em;
+        text-align: center;
+    }
+
+    main nav a {
+        display: inline;
+    }
+    #cols-group {
+        flex-direction: column; /* Stack images */
+        align-items: center;
+    }
+
+    .image-cols {
+        width: 80%;
+        margin-bottom: 1em;
+    }
+}
+
+/* change screen settings when screen max width is 480px */
+@media only screen and (max-width: 480px) {
+    html {
+        margin: 0;
+    }
+
+    body {
+        width: auto;
+    }
+
+    figure {
+        float: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    main nav a {
+        display: block;
+        font-size: 120%;
+        margin: 0;
+        border-bottom: 2px ridge #00005D;
+    }
+    .image-cols {
+        width: 100%; 
+    }
+
+}

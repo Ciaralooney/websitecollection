@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+    <meta charset="UTF-8">
+    <title>Hamtaro</title>
+    <!-- Linking the javascript file -->
+    <script src="javascript.js"></script>
+    <!-- Linking the css file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Linking the favicon -->
+    <!-- Image Source: https://findicons.com/icon/41121/penelope -->
+    <link rel="icon" type="image/x-icon" href="images/penelope.ico">
+    <!-- Importing google fonts -->
+    <!-- Code Source: https://fonts.google.com/ -->
+    <style> @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fredoka+One&family=Varela+Round&display=swap');</style>
+</head>
+<body>
+<header>
+    <!-- Inserting the photo to be used as the title banner -->
+    <!-- Image Source: https://hamtaro.fandom.com/wiki/Hamtaro_(TV_series) -->
+    <img src="images/banner.png" alt="Hamtaro Logo Banner" title="Hamtaro Logo" width="661" height="230">
+</header>
+<article>
+    <!-- Column 1 -->
+    <div id="cols-group">
+        <div class="inner-col1">
+            <!-- Creating an interactive navigation bar -->
+            <nav>
+                <!-- When the navigation button is clicked the submenu shows -->
+                <button id="nav" onclick="show()">Navigation</button>
+                <div class="hide" id="expandingMenu" >
+                    <a class="subMenu" href="http://www.hamhamparadise.com/">- Ham-Ham Paradise -</a>
+                    <a class="subMenu" href="https://hamtaro.fandom.com/wiki/The_Hamtaro_Wiki">- Hamtaro Wiki -</a>
+                </div>
+            </nav>
+            <br> <!-- Line break -->
+            <!-- Creating a slider form, calling the slide function when it is used -->
+            <form action="" onsubmit="return false;" onclick="slide()">
+                <label for="likeWebsite">Rate my website!</label>
+                <br> <!-- Line break -->
+                <!-- Defining the maximum and minimum range -->
+                0<input type="range" min="0" max="100" id="likeWebsite">10 <!-- Displaying a 0 and a 10 -->
+                <br> <!-- Line break --><span id="opinion">What do you think?</span>
+            </form>
+            <br> <!-- Line break -->
+            <!-- Creating an image that can be changed when it is clicked on
+               Calling changeOver function when the mouse is hovering on the image.
+               Calling the changeOut when the mouse moves away from the image -->
+            <!-- Image Source: https://gameation.wordpress.com/2014/10/31/spotlight-hamtaro-and-licensed-games/ -->
+            <img src="images/hamtaro.jpg" onmouseover="changeOver()" onmouseout="changeOut()" alt="Happy Hamtaro"
+                 title="Hamtaro" id="hamtaro" width="250" height="200">
+        </div>
+        <!-- Closing column 1 -->
+        <!-- Column 2 -->
+        <div class="inner-col2">
+            <!-- Letting the user input their favourite character -->
+            <h1>Who is your favourite member of the Ham-Ham Gang?</h1>
+            <!-- Gets the users input under the id favCharacter -->
+            <label>Enter the hamster here: <input type="text" id="favCharacter" name="favCharacter"></label>
+            <!-- calls the changeText function when the user submits the info -->
+            <button type="button" onclick="changeText()">Submit</button>
+            <!-- Displays the users input in a different font style -->
+            <p>You chose: <span id="userEntry"></span></p>
+            <br>    <!-- Line Break -->
+            <!-- Game when a characters is randomly selected when the user clicks a button on screen -->
+            <h2>Play the game!</h2>
+            <p>Click the button to see a biography on one of the main characters</p>
+            <!-- provide a button for user to click on to start the game. -->
+            <button onclick ="playGame()">
+                <!--call the function to randomly insert an image and info -->
+                <!-- Image Source: https://lparchive.org/Hamtaro-Ham-Ham-Heartbreak/Update%2011/ -->
+                <img src="images/harmony.png" alt="Harmony" width="64" height="64">
+                <br> <!-- Line Break -->
+                Start!
+            </button>
+            <div id="biography">
+                <!-- Opening a biography div so it can be given extra css styles -->
+                <!-- Setting the first image to be shown on the website for the game -->
+                <!-- Image Source: https://hamhamparadise.tumblr.com/post/186808296195/august-6th-happy-birthday-hamtaro-hamtaro-is/amp -->
+                <div id="startGame"><img src="images/hamster1.png" id="image" width="200" height="200" alt="Hamster"></div>
+                <!-- Setting the name etc to be blank at first but when the button is pressed
+                 information will be inserted -->
+                <p>Name: <span id="name"></span></p>
+                <p>Best Friend: <span id="friend"></span></p>
+                <p>Fun Fact: <span id="fact"></span></p>
+            </div>
+            <!-- Closing the biography div -->
+        </div>
+        <!-- Closing column 2 -->
+    </div>
+    <!-- Closing the div id="cols-group" -->
+</article>
+</body>
+<footer>
+    <hr>
+    <!-- Breaking the footer from the article -->
+    <small>
+        Hamtaro is a registered copyright &copy; of Alliance Atlantis Viz Media 2022
+        <br>     <!-- Line Break -->
+        This website is not affiliated with Alliance Atlantis Viz Media.
+        <br>     <!-- Line Break -->
+        <a href="mailto:ciara.looney@mycit.ie">ciara.looney@mycit.ie</a>
+    </small>
+</footer>
+</html>
