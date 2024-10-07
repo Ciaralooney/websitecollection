@@ -72,6 +72,7 @@ main::after {
  }
 
 header {
+    border-radius: 25px;
     /* Setting the type of font for the header, including some backup fonts */
     font-family: 'Titan One', cursive;
     /* Centering the text */
@@ -210,7 +211,7 @@ nav a:hover {
         border-bottom: 2px ridge #00005D;
     }
     .image-cols {
-        width: 100%; 
+        width: 100%;
     }
 
 }
