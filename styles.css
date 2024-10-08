@@ -1,0 +1,26 @@
+body {
+    background-color: #F2FBE0;
+    background-size: contain;
+    /* Setting the font colour */
+    color: #605B56;
+    /* Setting the font size */
+    font-size: 100%;
+    /* Setting the font type */
+    font-family: 'Varela Round', serif;
+    /* Setting the padding */
+    padding: 30px;
+	text-align: center;
+}
+
+
+h1, h2, h3 {
+    /* Setting the background colour */
+    background-color: #ACC18A;
+    /* Setting the font colour */
+    color: #837A75;
+    /* Setting the type */
+    font-family: 'Bubblegum Sans', 'Fredoka One', sans-serif;
+    /* Centering the text */
+    text-align: center;
+}
+
