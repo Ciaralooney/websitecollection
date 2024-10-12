@@ -119,3 +119,11 @@ function showRestartButton() {
     document.getElementById("restartButton").style.display = "block";
     document.getElementById("restartText").style.display = "block";
 }
+
+document.getElementById('loginBtn').addEventListener('click', () => {
+    netlifyIdentity.open(); // opens login modal
+});
+
+document.getElementById('signupBtn').addEventListener('click', () => {
+    netlifyIdentity.open();
+});
