@@ -1,0 +1,307 @@
+body {
+    background-color: #EBB3A9;
+    /* Setting the font colour */
+    color: black;
+    /* Setting the font size */
+    font-size: 100%;
+    /* Setting the font type */
+    font-family: 'Varela Round', serif;
+    padding: 30px;
+
+}
+
+/* Centering the text in articles  */
+article {
+    text-align: center;
+}
+
+.spacer {
+    height: 20px;
+}
+
+/* Navigation button styling  */
+nav a {
+    display: inline-block;
+    /* Setting the background colour */
+    /*background-color: #EE7F9E; */
+
+    background-color: #F0C808;
+    /* Removing underlines from links */
+    text-decoration: none;
+    /* Creatigng a large border */
+    border: 1px outset;
+    /* Setting padding and margin size */
+    margin: 0.625em 0 0.625em 0;
+    padding: 0.3125em;
+    /* Creating border and width  */
+    border-radius: 15px 15px 15px 15px;
+    width: 6em;
+    clear: left;
+    /* Making font bold  */
+    font-weight: bold;
+    /* Setting the type of font, including some backup fonts */
+    font-family: 'Fredoka One', sans-serif, cursive;
+    /* Centering the text */
+    text-align: center;
+}
+
+div {
+    /* Centering the text */
+    text-align: center;
+}
+
+main {
+    /* Setting the background colour */
+    background-color: #07A0C3;
+}
+
+/* creating a pseudo-element to style layout of table*/
+main::after {
+    display: block;
+    clear: left;
+    content: "";
+}
+
+header {
+    font-family: 'Bungee Inline', 'Titan One', cursive;
+    /* making a gradient background */
+    background: linear-gradient(135deg, #07A0C3, #005f8a, #1abc9c);
+    text-align: center;
+    /* rounding the corners */
+    border-radius: 10px;
+    /* shadow for depth */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.inner-cols {
+    border: solid black 4px;
+    padding: 25px; /*  looser spacing */
+    display: inline-block;
+}
+.player-winner {
+    color: #155623;
+}
+
+.computer-winner {
+    color: red;
+}
+#cols-group {
+    width: 100%;
+    margin: auto;
+    /* Using Flexbox to ensure columns are equal height */
+    display: flex;
+}
+
+#cols-group::after {
+    display: block;
+    clear: left;
+    content: "";
+}
+
+
+.image-cols {
+    /* Using Flexbox to ensure columns are equal height */
+    flex: 1 0 auto;
+    width: 25%;
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+footer {
+    clear: left;
+}
+
+
+
+h2 {
+    font-family: 'Fredoka One', 'Bubblegum Sans', sans-serif;
+}
+
+h3 {
+    font-family: 'Nabla', cursive;
+}
+
+h2 {
+    border-radius: 25px;
+    text-align: center;
+    background-color: #00B2A9;
+    padding: 5px 10px;
+    margin: 25px auto;
+    color: #605B56;
+    display: inline-block;
+}
+
+
+h1, h2 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* small shadow */
+}
+
+/* when mouse hovers over link */
+a:hover {
+    color: #F0C808;
+}
+
+/* selected link */
+a:active {
+    color: #086788;
+}
+
+/* style for unvisited link on navigation bar using pseudo-classes*/
+nav a:link {
+    /* removing the underlines on links */
+    text-decoration: none;
+}
+
+/* colour for a visited link on navigation bar using pseudo-classes*/
+nav a:visited {
+    color: #36271a;
+}
+
+/* colour and a border added when mouse is hovering over link on navigation bar using pseudo-classes*/
+nav a:hover {
+    color: #00776D;
+    border: 2px inset;
+    /* change to a different background colour */
+    background-color: #DD1C1A;
+}
+
+/* Use focus pseudo-class to give visual clue when input is selected in form*/
+input:focus {
+    /* Changing colour to grey */
+    background: #e6e6e6;
+}
+
+/* change screen settings when screen max width is 768px */
+@media only screen and (max-width: 768px) {
+    html {
+        margin: 0;
+    }
+
+    body {
+        margin: auto;
+    }
+
+    main nav {
+        float: none;
+        width: 100%;
+        padding: 0.5em;
+        text-align: center;
+    }
+
+    main nav a {
+        display: inline;
+    }
+
+    #cols-group, #choices-row {
+        flex-direction: column; /* Stack images */
+        align-items: center;
+    }
+
+    .image-cols, .choice-image {
+        width: 80%;
+        margin-bottom: 1em;
+    }
+}
+
+/* change screen settings when screen max width is 480px */
+@media only screen and (max-width: 480px) {
+    html {
+        margin: 0;
+    }
+
+    body {
+        width: auto;
+    }
+
+    figure {
+        float: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    main nav a {
+        display: block;
+        font-size: 120%;
+        margin: 0;
+        border-bottom: 2px ridge #00005D;
+    }
+
+    .image-cols, .choice-image {
+        width: 100%;
+    }
+}
+
+/* placing player and computer visual confirmation side by side */
+/* Flex container to align player and computer picks on the same line */
+.choices-row {
+    display: flex;
+    justify-content: space-between; /* Distributes space evenly between player and computer choices */
+    align-items: center; /* Aligns images and text vertically */
+    gap: 20px; /* Adds space between the two sections */
+    margin: 20px 0;
+    padding: 0 90px; /* */
+}
+
+.choices-row div {
+    display: flex;
+    flex-direction: column; /* Ensures the text is above the image */
+    align-items: center;
+}
+
+.choices-row img {
+    height: auto;
+}
+
+/* Styling for login and signup forms */
+.container {
+    background: linear-gradient(135deg, #07A0C3, #FFC1CC, #A6E1FA);
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    margin: 20px auto;
+}
+
+/* Form input styling */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid darkgrey;
+    box-sizing: border-box; /* ensure text fields stay in login box */
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+    background-color: #b2d8ea;
+}
+/* Designing the login button */
+button {
+    width: 100%;
+    background-color: #87e098;
+    color: black;
+    padding: 14px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem; /* Increases font of login button */
+}
+
+button:hover {
+    background-color: #599464;
+}
+
+#restartText {background-color: darkorange; opacity: .7}
+#restartButton {
+    margin: 20px auto;
+    width: 10%;
+    background-color: #de4def;
+    font-size: 16px;
+    cursor: pointer; /* changing from cursor to pointer */
+}
+
+#restartButton:hover {
+    background-color: #ce26b8;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+    <!-- Linking the css file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Linking the favicon -->
+    <!-- Image Source: https://www.iconspedia.com/icon/sleepy-alex-madagascar-icon-36072.html -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Importing google fonts -->
+    <!-- Code Source: https://fonts.google.com/ -->
+    <style> @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Bungee+Inline&family=Fredoka+One&family=Titan+One&family=Varela+Round&display=swap');</style>
+    <!-- Linking the javascript file -->
+    <script src="javascript.js"></script>
+    <script type="module" src="firebase.js"></script>
+</head>
+<body>
+<header>
+    <h1>Rock, Paper, Scissors!</h1>
+</header>
+<div class="spacer"></div>
+<!-- The div tags are used to centre the navigation bar -->
+<div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="faq.html">FAQs</a>
+        <a href="contact.html">Contact</a>
+        <a href="signup.html">Signup</a>
+        <a href="login.html">Login</a>
+    </nav>
+</div>
+<main>
+    <article>
+	<p>Have fun! and don't forget the <abbr title="Rock beats scissors, paper beats rock, scissors beats paper">rules</abbr></p>
+        <div id="cols-group">
+            <!-- Image Source: https://clipart-library.com/clip-art/rock-transparent-png-1.html -->
+            <div class="image-cols">
+                <button id="rockButton">
+                    <img src="images/rock.png" title="rock" alt="rock"> <br> Rock
+                </button>
+            </div>
+            <!-- Image Source: https://toppng.com/show_download/117967/crumpled-ball-of-paper -->
+            <div class="image-cols">
+                <button id="paperButton">
+                    <img src="images/paper.png" title="paper" alt="ball of paper"> <br> Paper
+                </button>
+            </div>
+            <!-- Image Source: https://pngimg.com/image/4373 -->
+            <div class="image-cols">
+                <button id="scissorsButton">
+                    <img src="images/scissors.png" title="scissors" alt="pair of scissors"> <br> Scissors
+                </button>
+            </div>
+        </div>
+
+        <div>
+            <div class="choices-row">
+                <div class="choice-image">
+                    <p>Player chose <span id="playerChoice"></span></p>
+                    <!-- Image source: https://www.tenstickers-ireland.com/canvas-prints/vague-purple-flowers-flower-canvas-Q1582 -->
+                    <!-- Placeholder flower image used in the meantime-->
+                    <img src="images/flowers.png" id="playerPick" alt="Player's picked option"></div>
+                <div class="choice-image">
+
+                    <!-- Creating an image that will change depending on the final game result -->
+                    <!-- Placeholder versus image used in the meantime-->
+                    <img src="images/versus.png" id="face" alt="Joke about players score">
+                </div>
+                <div class="choice-image">
+                    <p>Computer chose <span id="computerChoice"></span></p>
+                    <!-- Image source: https://www.tenstickers-ireland.com/canvas-prints/vague-purple-flowers-flower-canvas-Q1582 -->
+                    <!-- Placeholder flower image used in the meantime-->
+                    <img src="images/flowers.png" id="computerPick" alt="Computer's picked option">
+                </div>
+            </div>
+            <p id="restartText"  style="display: none;">Game Over! Click Play again for a rematch.</p>
+            <button id="restartButton" style="display: none;">Play again</button>
+            <div class="inner-cols">
+                <p>Result: <span id="gameResult"></span></p>
+                <p>Player score: <span id="playerScore">0</span>
+                <p>Computer score: <span id="computerScore">0</span></p>
+
+            </div>
+
+
+        </div>
+
+
+    </article>
+</main>
+<footer>
+    <hr>
+    <small>
+        <a href="mailto:ciara.looney@mycit.ie">ciara.looney@mycit.ie</a>
+    </small>
+</footer>
+</body>
+</html>
