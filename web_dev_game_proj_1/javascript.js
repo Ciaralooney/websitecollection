@@ -127,3 +127,18 @@ document.getElementById('loginBtn').addEventListener('click', () => {
 document.getElementById('signupBtn').addEventListener('click', () => {
     netlifyIdentity.open();
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    // checking if the user is logged in
+    netlifyIdentity.on('init', user => {
+        if (user) {
+            // fetching username
+            const username = user.user_metadata.full_name || user.email;
+            document.getElementById('userGreeting').innerHTML = `Hello ${username}`;
+        } else {
+            // If no one is logged in then don't display anything
+            document.getElementById('userGreeting').style.display = 'none';
+        }
+    });
+
+});

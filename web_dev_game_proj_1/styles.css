@@ -6,7 +6,7 @@ body {
     font-size: 100%;
     /* Setting the font type */
     font-family: 'Varela Round', serif;
-    padding: 30px;
+    padding: 50px 30px 50px 80px;  /* padding top right bottom left */
 
 }
 
@@ -51,8 +51,8 @@ div {
 }
 
 main {
-    /* Setting the background colour */
-    background-color: #07A0C3;
+    background-color: #07A0C3;    /* Setting the background colour */
+    padding: 40px 20px 40px 20px;  /* padding top right bottom left */
 }
 
 /* creating a pseudo-element to style layout of table*/
@@ -112,8 +112,6 @@ footer {
     clear: left;
 }
 
-
-
 h2 {
     font-family: 'Fredoka One', 'Bubblegum Sans', sans-serif;
 }
@@ -138,19 +136,15 @@ h1, h2 {
 }
 
 /* when mouse hovers over link */
-a:hover {
+.hyperlink:hover {
     color: #F0C808;
 }
 
-/* selected link */
-a:active {
-    color: #086788;
-}
-
-/* style for unvisited link on navigation bar using pseudo-classes*/
-nav a:link {
+/* style for visited and unvisited link using pseudo-classes*/
+a:link, a:visited {
     /* removing the underlines on links */
     text-decoration: none;
+    color: #AA336A;
 }
 
 /* colour for a visited link on navigation bar using pseudo-classes*/
@@ -163,13 +157,7 @@ nav a:hover {
     color: #00776D;
     border: 2px inset;
     /* change to a different background colour */
-    background-color: #DD1C1A;
-}
-
-/* Use focus pseudo-class to give visual clue when input is selected in form*/
-input:focus {
-    /* Changing colour to grey */
-    background: #e6e6e6;
+    background-color: #dd821a;
 }
 
 /* change screen settings when screen max width is 768px */
@@ -254,43 +242,21 @@ input:focus {
     height: auto;
 }
 
-/* Styling for login and signup forms */
-.container {
-    background: linear-gradient(135deg, #07A0C3, #FFC1CC, #A6E1FA);
-    padding: 20px;
-    border-radius: 10px;
-    width: 350px;
-    margin: 20px auto;
-}
-
-/* Form input styling */
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: 12px;
-    margin: 8px 0;
-    border: 1px solid darkgrey;
-    box-sizing: border-box; /* ensure text fields stay in login box */
-}
-input[type="text"]:focus,
-input[type="password"]:focus {
-    background-color: #b2d8ea;
-}
-/* Designing the login button */
+/* Designing the button for rock paper scissors */
 button {
     width: 100%;
-    background-color: #87e098;
+    background-color: #5eabcb;
     color: black;
     padding: 14px 20px;
     margin: 10px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 1rem; /* Increases font of login button */
+    font-size: 1rem; /* Increases font of button */
 }
 
 button:hover {
-    background-color: #599464;
+    background-color: #47a6ce;
 }
 
 #restartText {background-color: darkorange; opacity: .7}
@@ -304,4 +270,18 @@ button:hover {
 
 #restartButton:hover {
     background-color: #ce26b8;
+}
+/* Styling for login and signup forms */
+.container {
+    background: linear-gradient(135deg, #07A0C3, #FFC1CC, #A6E1FA);
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    margin: 20px auto;
+    font-size: 2rem; /* Increases font of button */
+}
+
+/* When user hovers over log in or signup make container darker */
+.container:hover{
+    filter: brightness(70%);
 }
