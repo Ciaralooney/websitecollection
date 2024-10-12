@@ -31,27 +31,14 @@
     </nav>
 </div>
 <main>
-    <article><div data-netlify-identity-menu></div>
+    <article>
         <div class="container">
             <h3>Signup</h3>
-            <form id="signup-form" method="POST" data-netlify="true">
-                <label for="username"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="username" id="username" required>
-
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-
-                <label for="psw-repeat"><b>Repeat Password</b></label>
-                <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-                <hr>
-
-                <button type="submit" class="registerbtn">Register</button>
+            <form id="signup-form" method="POST">
+                <div data-netlify-identity-menu></div>
             </form>
         </div>
-
-        <div class="container signin">
-            <p>Already have an account? <a href="login.html">Login</a>.</p>
-        </div>
+        
     </article>
 </main>
 <footer>
