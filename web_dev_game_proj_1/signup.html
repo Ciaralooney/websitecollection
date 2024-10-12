@@ -31,11 +31,10 @@
     </nav>
 </div>
 <main>
-    <article>
+    <article><div data-netlify-identity-menu></div>
         <div class="container">
             <h3>Signup</h3>
             <form id="signup-form" method="POST" data-netlify="true">
-
                 <label for="username"><b>Username</b></label>
                 <input type="text" placeholder="Enter Username" name="username" id="username" required>
 
@@ -48,6 +47,10 @@
 
                 <button type="submit" class="registerbtn">Register</button>
             </form>
+        </div>
+
+        <div class="container signin">
+            <p>Already have an account? <a href="login.html">Login</a>.</p>
         </div>
     </article>
 </main>
