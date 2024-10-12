@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup</title>
+    <!-- Linking the css file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Linking the favicon -->
+    <!-- Image Source: https://www.iconspedia.com/icon/sleepy-alex-madagascar-icon-36072.html -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <!-- Importing google fonts -->
+    <!-- Code Source: https://fonts.google.com/ -->
+    <style> @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Bungee+Inline&family=Fredoka+One&family=Titan+One&family=Varela+Round&display=swap');</style>
+    <!-- Linking the javascript file -->
+    <script src="javascript.js"></script>
+    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+<header>
+    <h1>Rock, Paper, Scissors!</h1>
+</header>
+<div class="spacer"></div>
+<!-- The div tags are used to centre the navigation bar -->
+<div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="faq.html">FAQs</a>
+        <a href="contact.html">Contact</a>
+        <a href="signup.html">Signup</a>
+        <a href="login.html">Login</a>
+    </nav>
+</div>
+<main>
+    <article>
+        <div class="container">
+            <h3>Signup</h3>
+            <form id="signup-form" method="POST" data-netlify="true">
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" id="username" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+                <hr>
+
+                <button type="submit" class="registerbtn">Register</button>
+            </form>
+        </div>
+
+        <div class="container signin">
+            <p>Already have an account? <a href="login.html">Login</a>.</p>
+        </div>
+    </article>
+</main>
+<footer>
+    <hr>
+    <small>
+        <a href="mailto:ciara.looney@mycit.ie">ciara.looney@mycit.ie</a>
+    </small>
+</footer>
+</body>
+</html>
