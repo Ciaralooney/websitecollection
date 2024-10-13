@@ -133,7 +133,7 @@ netlifyIdentity.init(); // starting the Netlify identity widget
 netlifyIdentity.on('login', (user) => { // event listener
     if (user) {
         const username = user.user_metadata.full_name || user.email;
-
+        location.reload(); // forcing reload of page
         document.getElementById('welcome-message').style.display = 'none';
         document.getElementById('username').innerText = username;
 
