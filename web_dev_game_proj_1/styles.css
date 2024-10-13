@@ -285,3 +285,6 @@ button:hover {
 .container:hover{
     filter: brightness(70%);
 }
+#play-game-link {
+    display: none;
+}
