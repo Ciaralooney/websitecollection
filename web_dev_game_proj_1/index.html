@@ -30,23 +30,48 @@
     </nav>
 </div>
 <main>
+
     <article>
-        <h1>Welcome to my website</h1>
-        <p>   Please access your account below. If you don't have an account then choose sign up</p>
-            <div class="container">
-                <a href="#" onclick="netlifyIdentity.open('signup'); return false;">Sign Up</a>
-            </div>
-            <div class="container">
-                <a href="#" onclick="netlifyIdentity.open('login'); return false;">Log In</a>
-            </div>
-        <div id="play-game-link">
-            <p>Welcome back, <span id="username"></span>! Play the game here: <a href="game.html">Game</a></p>
+
+        <h1>Welcome!</h1>
+        <p> Please access your account. If you don't have an account then choose sign up</p>
+        <br>
+        <!-- Image Source: https://www.pngwing.com/en/free-png-nolwr -->
+        <div class="play-game">
+            <a href="game.html"><img src="images/button.png" alt="Play game button"
+                                     aria-label="Play game button" id="play-button"></a>
+            <img src="images/stars.gif" alt="Sparkly stars" id="star-overlay"> <!-- Image Source: pngwing.com -->
         </div>
+
+        <div class="container">
+            <a href="#" onclick="netlifyIdentity.open('signup'); return false;">Sign Up</a>
+        </div>
+
+        <!-- Creating a slider form, calling the slide function when it is used -->
+        <section id="rating">
+            <form action="" class="websiteSlider" aria-label="Website Rating" onsubmit="return false;"
+                  onclick="slide()">
+                <label for="likeWebsite">Rate my website!</label> <br>
+                0<input type="range" min="0" max="100" id="likeWebsite">10 <!-- Displaying a 0 and a 10 -->
+                <br><span id="opinion">What do you think?</span> <br> <br>
+            </form>
+            <div id="W3Cert">
+                <img src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+                     alt="Valid CSS">
+                <img src="images/badge-blue.png"
+                     alt="Valid HTML"></div>
+        </section>
+
+        <div class="container">
+            <a href="#" onclick="netlifyIdentity.open('login'); return false;">Log In</a>
+        </div>
+
     </article>
 </main>
 <footer>
     <hr>
     <small>
+        Fun fact: Rock, paper, scissors is almost 2000 years old.<br>
         <a href="mailto:ciara.looney@mycit.ie">ciara.looney@mycit.ie</a>
     </small>
 </footer>

@@ -1,7 +1,6 @@
 var playerScore = 0;
 var computerScore = 0;
 var winning_score = 10;
-var currentUser = null;
 
 function playGame(playerChoice) {
     const computerOptions = ['rock', 'paper', 'scissors'];
@@ -11,6 +10,10 @@ function playGame(playerChoice) {
 
     document.getElementById("playerChoice").innerText = playerChoice;
     document.getElementById("computerChoice").innerText = computerChoice;
+
+    // Image sources: https://tenor.com/y6hB.gif
+    // 				  https://tenor.com/gOLPkWCfHzI.gif
+    // 				  https://commons.m.wikimedia.org/wiki/File:Scissors.gif
     document.getElementById("playerPick").src = "images/" + playerChoice + ".gif";
     document.getElementById("computerPick").src = "images/" + computerChoice + ".gif";
 
@@ -34,15 +37,17 @@ function playGame(playerChoice) {
     if (playerScore === winning_score && computerScore === winning_score) {
         // If both the player and computer score 10, it's a tie and a final round is needed
         result = "It is a tie, final round!";
+        // Image source: Frinkiac.com
         document.getElementById("face").src = "images/tie.gif";
     } else if (playerScore === winning_score) {
         result = '<span class="player-winner">The player is the final winner!</span>';
+        // Image source: Frinkiac.com
         document.getElementById("face").src = "images/win.gif";
-        updateGamesWon();
         disableButtons();
         showRestartButton();
     } else if (computerScore === winning_score) {
         result = '<span class="computer-winner">You lost. The computer is the final winner!</span>';
+        // Image source: Frinkiac.com
         document.getElementById("face").src = "images/lost.gif";
         disableButtons();
         showRestartButton();
@@ -50,9 +55,6 @@ function playGame(playerChoice) {
 
     document.getElementById("gameResult").innerHTML = result; // allows html inside gameresult span
     updateScores();
-
-
-
 }
 
 function disableButtons() {
@@ -76,24 +78,24 @@ function updateScores() {
 }
 
 // Using event listeners that will call the function with a parameter based on what button the player chooses
- document.addEventListener("DOMContentLoaded", function() { // ensuring all page content is loaded
-     document.getElementById("rockButton").addEventListener("click", function() {
-         playGame('rock');
-     });
+document.addEventListener("DOMContentLoaded", function () { // ensuring all page content is loaded
+    document.getElementById("rockButton").addEventListener("click", function () {
+        playGame('rock');
+    });
 
-     document.getElementById("paperButton").addEventListener("click", function() {
-         playGame('paper');
-     });
+    document.getElementById("paperButton").addEventListener("click", function () {
+        playGame('paper');
+    });
 
-     document.getElementById("scissorsButton").addEventListener("click", function() {
-         playGame('scissors');
-     });
+    document.getElementById("scissorsButton").addEventListener("click", function () {
+        playGame('scissors');
+    });
 
-     // event listener for the reset button
-     document.getElementById("restartButton").addEventListener("click", function() {
-         resetGame();
-     });
- });
+    // event listener for the reset button
+    document.getElementById("restartButton").addEventListener("click", function () {
+        resetGame();
+    });
+});
 
 function resetGame() {
     playerScore = 0;
@@ -102,10 +104,11 @@ function resetGame() {
     document.getElementById("gameResult").innerText = "New game started!";
     document.getElementById("playerChoice").innerText = "";
     document.getElementById("computerChoice").innerText = "";
-    // Image source: https://www.tenstickers-ireland.com/canvas-prints/vague-purple-flowers-flower-canvas-Q1582
-    document.getElementById("playerPick").src="images/flowers.png"; // Placeholder flower image used in the meantime
-    document.getElementById("computerPick").src="images/flowers.png"; // Placeholder flower image used in the meantime
-    document.getElementById("face").src="images/versus.png"; // Placeholder versus image used in the meantime
+    // Image source: clubpenguin.com
+    document.getElementById("playerPick").src = "images/placeholder_face.png"; // Placeholder image used in the meantime
+    document.getElementById("computerPick").src = "images/placeholder_face.png"; // Placeholder image used in the meantime
+    // Image source: https://www.pngwing.com/en/free-png-dxplb/download
+    document.getElementById("face").src = "images/versus.png"; // Placeholder versus image used in the meantime
     updateScores();
     hideRestartButton();
 }
@@ -128,14 +131,18 @@ document.getElementById('signupBtn').addEventListener('click', () => {
     netlifyIdentity.open();
 });
 
-netlifyIdentity.init(); // starting the Netlify identity widget
+/* Add the JavaScript with the event handler  to react to the bar changing value*/
+document.getElementById("likeWebsite").onchange = slide;
 
-netlifyIdentity.on('login', (user) => { // event listener
-    if (user) {
-        const username = user.user_metadata.full_name || user.email;
-        document.getElementById('welcome-message').style.display = 'none';
-        document.getElementById('username').innerText = username;
-
-        document.getElementById('play-game-link').style.display = 'block';
+function slide() {
+    var chosenNumber = document.getElementById("likeWebsite").value;
+    if (chosenNumber > 60) {
+        document.getElementById("opinion").innerHTML = "It's Great!";
+    } else if (chosenNumber > 40) {
+        document.getElementById("opinion").innerHTML = "It's Good";
+    } else {
+        document.getElementById("opinion").innerHTML = "It's Okay";
     }
-});
+}
+
+netlifyIdentity.init(); // starting the Netlify identity widget

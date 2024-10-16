@@ -1,5 +1,10 @@
 body {
     background-color: #EBB3A9;
+    background-image: url("images/background.png");
+    background-size: contain; /* whole image is visible */
+    background-repeat: no-repeat;
+    background-position: center;
+
     /* Setting the font colour */
     color: black;
     /* Setting the font size */
@@ -10,9 +15,41 @@ body {
 
 }
 
+/* Setting the gif and ascii art to the left in the Contact page */
+#decoration {
+    float: left
+}
+
+.play-game {
+    position: relative; /* lets transparent image float over button */
+    display: inline-block; /* Ensures overlay image stays in correct position */
+
+}
+
+#star-overlay {
+    position: absolute; /* absolute position on other image */
+    /* By aligning to top and left it ensures the image is overlapping the correct part */
+    top: 0;
+    left: 0;
+    display: none; /* hiding the star overlay at first */
+    pointer-events: none; /* Ensures element reacts to hover events, click etc */
+}
+
+/* When hovering over the play game button, display the stars */
+.play-game:hover #star-overlay {
+    display: block;
+}
+
 /* Centering the text in articles  */
-article {
+h1, article {
     text-align: center;
+}
+
+#W3Cert {
+    float: left;
+    border: 0;
+    width: 88px;
+    height: 31px;
 }
 
 .spacer {
@@ -73,7 +110,15 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
-
+#rating {
+    border: solid #b2d8ea 2px;
+    padding: 40px; /*  looser spacing */
+    display: block;
+    width: 30%;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+}
 .inner-cols {
     border: solid black 4px;
     padding: 25px; /*  looser spacing */
@@ -81,10 +126,12 @@ header {
 }
 .player-winner {
     color: #155623;
+    font-weight: bold;
 }
 
 .computer-winner {
     color: red;
+    font-weight: bold;
 }
 #cols-group {
     width: 100%;
@@ -160,67 +207,6 @@ nav a:hover {
     background-color: #dd821a;
 }
 
-/* change screen settings when screen max width is 768px */
-@media only screen and (max-width: 768px) {
-    html {
-        margin: 0;
-    }
-
-    body {
-        margin: auto;
-    }
-
-    main nav {
-        float: none;
-        width: 100%;
-        padding: 0.5em;
-        text-align: center;
-    }
-
-    main nav a {
-        display: inline;
-    }
-
-    #cols-group, #choices-row {
-        flex-direction: column; /* Stack images */
-        align-items: center;
-    }
-
-    .image-cols, .choice-image {
-        width: 80%;
-        margin-bottom: 1em;
-    }
-}
-
-/* change screen settings when screen max width is 480px */
-@media only screen and (max-width: 480px) {
-    html {
-        margin: 0;
-    }
-
-    body {
-        width: auto;
-    }
-
-    figure {
-        float: none;
-        padding: 0;
-        margin: 0;
-        text-align: center;
-    }
-
-    main nav a {
-        display: block;
-        font-size: 120%;
-        margin: 0;
-        border-bottom: 2px ridge #00005D;
-    }
-
-    .image-cols, .choice-image {
-        width: 100%;
-    }
-}
-
 /* placing player and computer visual confirmation side by side */
 /* Flex container to align player and computer picks on the same line */
 .choices-row {
@@ -271,6 +257,7 @@ button:hover {
 #restartButton:hover {
     background-color: #ce26b8;
 }
+
 /* Styling for login and signup forms */
 .container {
     background: linear-gradient(135deg, #07A0C3, #FFC1CC, #A6E1FA);
@@ -284,4 +271,79 @@ button:hover {
 /* When user hovers over log in or signup make container darker */
 .container:hover{
     filter: brightness(70%);
+}
+.play-game:hover{
+    filter: brightness(90%);
+}
+
+/* change screen settings when screen max width is 768px */
+@media only screen and (max-width: 768px) {
+    html {
+        margin: 0;
+    }
+
+    body {
+        margin: auto;
+    }
+
+    main nav {
+        float: none;
+        width: 100%;
+        padding: 0.5em;
+        text-align: center;
+    }
+
+    main nav a {
+        display: inline;
+    }
+
+    #cols-group, #choices-row {
+        flex-direction: column; /* Stack images */
+        align-items: center;
+    }
+
+    .image-cols, .choice-image {
+        width: 80%;
+        margin-bottom: 1em;
+    }
+    #auth-container {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    #play-game-link {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+}
+
+/* change screen settings when screen max width is 480px */
+@media only screen and (max-width: 480px) {
+    html {
+        margin: 0;
+    }
+
+    body {
+        width: auto;
+    }
+
+    figure {
+        float: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    main nav a {
+        display: block;
+        font-size: 120%;
+        margin: 0;
+        border-bottom: 2px ridge #00005D;
+    }
+
+    .image-cols, .choice-image {
+        width: 100%;
+    }
+
 }

@@ -30,8 +30,10 @@
     </nav>
 </div>
 <main>
+    <h1>The Main Game</h1>
     <article>
-	<p>Have fun! and don't forget the <abbr title="Rock beats scissors, paper beats rock, scissors beats paper">rules</abbr></p>
+        <p>Have fun! and don't forget the <abbr title="Rock beats scissors, paper beats rock, scissors beats paper">rules</abbr>
+        </p>
         <div id="cols-group">
             <!-- Image Source: https://clipart-library.com/clip-art/rock-transparent-png-1.html -->
             <div class="image-cols">
@@ -58,8 +60,8 @@
                 <div class="choice-image">
                     <p>Player chose <span id="playerChoice"></span></p>
                     <!-- Image source: https://www.tenstickers-ireland.com/canvas-prints/vague-purple-flowers-flower-canvas-Q1582 -->
-                    <!-- Placeholder flower image used in the meantime-->
-                    <img src="images/flowers.png" id="playerPick" alt="Player's picked option"></div>
+                    <!-- Placeholder image used in the meantime-->
+                    <img src="images/placeholder_face.png" id="playerPick" alt="Player's picked option"></div>
                 <div class="choice-image">
 
                     <!-- Creating an image that will change depending on the final game result -->
@@ -68,13 +70,13 @@
                 </div>
                 <div class="choice-image">
                     <p>Computer chose <span id="computerChoice"></span></p>
-                    <!-- Image source: https://www.tenstickers-ireland.com/canvas-prints/vague-purple-flowers-flower-canvas-Q1582 -->
-                    <!-- Placeholder flower image used in the meantime-->
-                    <img src="images/flowers.png" id="computerPick" alt="Computer's picked option">
+                    <!-- Image source:  clubpenguin.com -->
+                    <!-- Placeholder image used in the meantime-->
+                    <img src="images/placeholder_face.png" id="computerPick" alt="Computer's picked option">
                 </div>
             </div>
-            <p id="restartText"  style="display: none;">Game Over! Click Play again for a rematch.</p>
-            <button id="restartButton" style="display: none;">Play again</button>
+            <p id="restartText" style="display: none;">Game Over! Click Play again for a rematch.</p>
+            <button id="restartButton" aria-label="Restart button" style="display: none;">Play again</button>
             <div class="inner-cols">
                 <p>Result: <span id="gameResult"></span></p>
                 <p>Player score: <span id="playerScore">0</span>
@@ -86,6 +88,7 @@
 <footer>
     <hr>
     <small>
+        Fun fact: Rock, paper, scissors is almost 2000 years old.<br>
         <a href="mailto:ciara.looney@mycit.ie">ciara.looney@mycit.ie</a>
     </small>
 </footer>
