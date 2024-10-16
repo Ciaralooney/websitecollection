@@ -39,7 +39,7 @@ ul {
 nav a {
     display: inline-block;
     /* Setting the background colour */
-    background-color: #DAFEB7;
+    background-color: #eeab53;
     /* Removing underlines from links */
     text-decoration: none;
     /* Creatigng a large border */
@@ -152,9 +152,8 @@ nav a:hover {
     color: #00776D;
     border: 2px inset;
     /* change to lighter background colour */
-    background-color: #f198b1;
+    background-color: #98f1ee;
 }
-
 
 /* change screen settings when screen max width is 768px */
 @media only screen and (max-width: 768px) {
