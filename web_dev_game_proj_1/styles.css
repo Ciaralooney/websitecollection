@@ -19,6 +19,14 @@ body {
 #decoration {
     float: left
 }
+html, body {
+    /* Source: http://www.rw-designer.com/cursor-set/cute-little-frogs-cc */
+    cursor: url("cursor/regular.cur"), default;
+}
+a:hover {
+    /* Source: http://www.rw-designer.com/cursor-set/cute-little-frogs-cc */
+    cursor: url("cursor/hover.cur"), default;
+}
 
 .play-game {
     position: relative; /* lets transparent image float over button */
@@ -118,7 +126,26 @@ header {
     height: 100%;
     float: left;
     box-sizing: border-box;
+
 }
+form.websiteSlider, #W3Cert {
+    width: 100%; /* slider needs full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form.websiteSlider label {
+    margin-bottom: 10px;
+
+}
+
+form.websiteSlider input[type="range"] {
+    width: 80%; /* resizing slider when needed */
+    /* Source: http://www.rw-designer.com/cursor-set/cute-little-frogs-cc */
+    cursor: url("cursor/hover.cur"), default;
+}
+
 .inner-cols {
     border: solid black 4px;
     padding: 25px; /*  looser spacing */
@@ -243,6 +270,8 @@ button {
 
 button:hover {
     background-color: #47a6ce;
+    /* Source: http://www.rw-designer.com/cursor-set/cute-little-frogs-cc */
+    cursor: url("cursor/hover.cur"), default;
 }
 
 #restartText {background-color: darkorange; opacity: .7}
@@ -263,8 +292,10 @@ button:hover {
     background: linear-gradient(135deg, #07A0C3, #FFC1CC, #A6E1FA);
     padding: 20px;
     border-radius: 10px;
-    width: 350px;
+    width: 90%; /* Changes dynamically */
+    max-width: 350px;
     margin: 20px auto;
+
     font-size: 2rem; /* Increases font of button */
 }
 
@@ -310,12 +341,18 @@ button:hover {
         text-align: center;
         margin: 10px 0;
     }
+    #rating, #W3Cert{
+        width: 100%; /* stops overlap */
+        float: none;
+    }
 
     #play-game-link {
         font-size: 1.2em;
         text-align: center;
     }
-
+    .choice-image {
+        width: 45%;
+    }
 }
 
 /* change screen settings when screen max width is 480px */
@@ -342,8 +379,15 @@ button:hover {
         border-bottom: 2px ridge #00005D;
     }
 
-    .image-cols, .choice-image {
+    .image-cols {
         width: 100%;
+    }
+    .choice-image {
+        width: 45%;
+    }
+    #rating, #W3Cert{
+        width: 100%; /* stops overlap */
+        float: none;
     }
 
 }
