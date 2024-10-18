@@ -14,6 +14,7 @@ function playGame(playerChoice) {
     // Image sources: https://tenor.com/y6hB.gif
     // 				  https://tenor.com/gOLPkWCfHzI.gif
     // 				  https://commons.m.wikimedia.org/wiki/File:Scissors.gif
+    // Visual showing what the player and computer picked
     document.getElementById("playerPick").src = "images/" + playerChoice + ".gif";
     document.getElementById("computerPick").src = "images/" + computerChoice + ".gif";
 
@@ -136,6 +137,7 @@ document.getElementById("likeWebsite").onchange = slide;
 
 function slide() {
     var chosenNumber = document.getElementById("likeWebsite").value;
+    // Changing the text based on the score the user gave
     if (chosenNumber > 60) {
         document.getElementById("opinion").innerHTML = "It's Great!";
     } else if (chosenNumber > 40) {

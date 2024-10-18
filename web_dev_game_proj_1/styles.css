@@ -1,6 +1,6 @@
 body {
     background-color: #EBB3A9;
-    background-image: url("images/background.png");
+    background-image: url("images/background.png"); /* adding a transparent image to background */
     background-size: contain; /* whole image is visible */
     background-repeat: no-repeat;
     background-position: center;
@@ -11,7 +11,7 @@ body {
     font-size: 100%;
     /* Setting the font type */
     font-family: 'Varela Round', serif;
-    padding: 50px 30px 50px 80px;  /* padding top right bottom left */
+    padding: 50px 30px 50px 80px; /* padding top right bottom left */
 
 }
 
@@ -19,10 +19,13 @@ body {
 #decoration {
     float: left
 }
+
+/* Setting a custom cursor */
 html, body {
     /* Source: http://www.rw-designer.com/cursor-set/cute-little-frogs-cc */
     cursor: url("cursor/regular.cur"), default;
 }
+
 a:hover {
     /* Source: http://www.rw-designer.com/cursor-set/cute-little-frogs-cc */
     cursor: url("cursor/hover.cur"), default;
@@ -53,6 +56,7 @@ h1, article {
     text-align: center;
 }
 
+/* Ensures the W3 images stay in border box */
 #W3Cert {
     float: left;
     border: 0;
@@ -68,12 +72,10 @@ h1, article {
 nav a {
     display: inline-block;
     /* Setting the background colour */
-    /*background-color: #EE7F9E; */
-
     background-color: #F0C808;
     /* Removing underlines from links */
     text-decoration: none;
-    /* Creatigng a large border */
+    /* Creating a large border */
     border: 1px outset;
     /* Setting padding and margin size */
     margin: 0.625em 0 0.625em 0;
@@ -96,8 +98,8 @@ div {
 }
 
 main {
-    background-color: #07A0C3;    /* Setting the background colour */
-    padding: 40px 20px 40px 20px;  /* padding top right bottom left */
+    background-color: #07A0C3; /* Setting the background colour */
+    padding: 40px 20px 40px 20px; /* padding top right bottom left */
 }
 
 /* creating a pseudo-element to style layout of table*/
@@ -118,16 +120,19 @@ header {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
+
 #rating {
     border: solid #b2d8ea 2px;
     padding: 40px; /*  looser spacing */
     display: block;
+    /* Using percentage to it dynamically changes width if page size changes */
     width: 30%;
     height: 100%;
     float: left;
     box-sizing: border-box;
 
 }
+
 form.websiteSlider, #W3Cert {
     width: 100%; /* slider needs full width */
     display: flex;
@@ -151,6 +156,7 @@ form.websiteSlider input[type="range"] {
     padding: 25px; /*  looser spacing */
     display: inline-block;
 }
+
 .player-winner {
     color: #155623;
     font-weight: bold;
@@ -160,6 +166,7 @@ form.websiteSlider input[type="range"] {
     color: red;
     font-weight: bold;
 }
+
 #cols-group {
     width: 100%;
     margin: auto;
@@ -186,6 +193,7 @@ footer {
     clear: left;
 }
 
+/* Setting custom fonts and backup fonts */
 h2 {
     font-family: 'Fredoka One', 'Bubblegum Sans', sans-serif;
 }
@@ -274,7 +282,11 @@ button:hover {
     cursor: url("cursor/hover.cur"), default;
 }
 
-#restartText {background-color: darkorange; opacity: .7}
+#restartText {
+    background-color: darkorange;
+    opacity: .7
+}
+
 #restartButton {
     margin: 20px auto;
     width: 10%;
@@ -300,10 +312,11 @@ button:hover {
 }
 
 /* When user hovers over log in or signup make container darker */
-.container:hover{
+.container:hover {
     filter: brightness(70%);
 }
-.play-game:hover{
+
+.play-game:hover {
     filter: brightness(90%);
 }
 
@@ -337,11 +350,13 @@ button:hover {
         width: 80%;
         margin-bottom: 1em;
     }
+
     #auth-container {
         text-align: center;
         margin: 10px 0;
     }
-    #rating, #W3Cert{
+
+    #rating, #W3Cert {
         width: 100%; /* stops overlap */
         float: none;
     }
@@ -350,8 +365,13 @@ button:hover {
         font-size: 1.2em;
         text-align: center;
     }
+
     .choice-image {
         width: 45%;
+    }
+
+    #face {
+        width: 70%
     }
 }
 
@@ -382,12 +402,19 @@ button:hover {
     .image-cols {
         width: 100%;
     }
+
     .choice-image {
         width: 45%;
     }
-    #rating, #W3Cert{
+
+    #rating, #W3Cert {
         width: 100%; /* stops overlap */
         float: none;
     }
+
+    #face {
+        width: 70%
+    }
+
 
 }
