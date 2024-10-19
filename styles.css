@@ -1,5 +1,5 @@
 body {
-    background-color: #F2FBE0;
+    background-color: #fbebe0;
     background-size: contain;
     /* Setting the font colour */
     color: #605B56;
@@ -24,3 +24,85 @@ h1, h2, h3 {
     text-align: center;
 }
 
+#cols-group, #cols-group2 {
+    width: 100%;
+    margin: auto;
+    /* Using Flexbox to ensure columns are equal height */
+    display: flex;
+}
+
+#cols-group::after, #cols-group2::after {
+    display: block;
+    clear: left;
+    content: "";
+}
+
+.inner-cols, .image-cols {
+    /* Using Flexbox to ensure columns are equal height */
+    flex: 1 0 auto;
+    min-width: 0;
+}
+
+/* change screen settings when screen max width is 768px */
+@media only screen and (max-width: 768px) {
+    html {
+        margin: 0;
+    }
+
+    body {
+        margin: auto;
+    }
+
+    main nav {
+        float: none;
+        width: 100%;
+        padding: 0.5em;
+        text-align: center;
+    }
+    #cols-group, #cols-group2 {
+        flex-direction: column; /* Stack images */
+        align-items: center;
+    }
+
+    main nav a {
+        display: inline;
+    }
+    #cols-group, #cols-group2 {
+        flex-direction: column; /* Stack images */
+        align-items: center;
+    }
+
+    .image-cols {
+        width: 80%;
+        margin-bottom: 1em;
+    }
+}
+
+/* change screen settings when screen max width is 480px */
+@media only screen and (max-width: 480px) {
+    html {
+        margin: 0;
+    }
+
+    body {
+        width: auto;
+    }
+
+    figure {
+        float: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    main nav a {
+        display: block;
+        font-size: 120%;
+        margin: 0;
+        border-bottom: 2px ridge #00005D;
+    }
+    .image-cols {
+        width: 100%;
+    }
+
+}
