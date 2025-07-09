@@ -2,7 +2,7 @@
 <html lang="en-IE">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <title>Portfolio</title>
     <!-- Linking the css file -->
     <link rel="stylesheet" href="styles.css">
     <!-- Linking the favicon -->
@@ -12,38 +12,143 @@
     <script src="javascript.js"></script>
     <!-- Importing google fonts -->
     <!-- Code Source: https://fonts.google.com/ -->
-    <style> @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Bungee+Inline&family=Fredoka+One&family=Titan+One&family=Varela+Round&display=swap');</style>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+  </style>
 </head>
 <body>
-<header>
-    <h1>File Index</h1>
-</header>
-<main>
-    <article>
-        <p> Please check out my projects by clicking on them below. They have been sorted into categories. 
-        </p>
-        <h2>College Projects</h2>
-        <p>
-            <a href="project1/index.html">CSS Project</a>
-            <br>
+  <header class="hero">
+    <h1>Hi, I'm Ciara</h1>
+    <p>Software Developer | Designer | Creative Thinker</p>
+  </header>
 
-            <a href="project2/index.html">Javascript project</a>
-            <br>
-            <a href="web_dev_game_proj_1/index.html">Javascript Interactive Game</a>
-            <br>
+  <nav class="navbar">
+    <a href="#projects">College Projects</a>
+    <a href="#personal-projects">Personal Projects</a>
+    <a href="#web-projects">Websites</a>
+    <a href="#about">About</a>
+    <a href="#CV">CV</a>
+  <main>
+        <section id="projects">
+      <h2>College Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="images/web1.png" alt="Agentic Corporate Trader Project" />
+          <h3>Agentic Corporate Trader</h3>
+          <p>The development of an Agentic Corporate Trader (ACT) system driven by Artificial Intelligence (AI). Users will be able to directly invest in crypto and stocks using AI-assisted tools.</p>
+          <a href="https://github.com/Ciaralooney/ACT-AI-G19" class="btn">View</a>
+        </div>
+		
+		<div class="project-card">
+          <img src="images/web1.png" alt="ACT Mobile Project" />
+          <h3>ACT Mobile</h3>
+          <p>Agentic Corporate Trader Mobile App developed in Kotlin, to be paired with Agentic Corporate Trader (ACT) system </p>
+          <a href="https://github.com/Ciaralooney/ACT_mobile" class="btn">View</a>
+        </div>
+		
+		<div class="project-card">
+          <img src="images/web1.png" alt="MTU Booking App" />
+          <h3>MTU Booking App</h3>
+          <p>This app is designed for trainees and trainers to organise their timetable and bookings for the MTU arena.</p>
+          <a href="https://github.com/Ciaralooney/agile-project" class="btn">View</a>
+        </div>
+		
+		<div class="project-card">
+          <img src="images/web1.png" alt="Admin website" />
+          <h3>Admin Website for the MTU Booking App</h3>
+          <p>Admin can use the website to make changes to the database, to be paired with the MTU Booking App</p>
+          <a href="https://github.com/Ciaralooney/agile-admin-website" class="btn">View</a>
+        </div>
+		
+		<div class="project-card">
+          <img src="images/web1.png" alt="Workshop booking site" />
+          <h3>Workshop Booking Site</h3>
+          <p>A booking website using mongodb and node.js</p>
+          <a href="https://github.com/Ciaralooney/bookingsite" class="btn">View</a>
+        </div>
+		
+		<div class="project-card">
+          <img src="images/web1.png" alt="Pong game" />
+          <h3>Pong Game</h3>
+          <p>An object oriented approach to a pong game. Includes multiplayer and save file features. Created using Java</p>
+          <a href="https://github.com/Ciaralooney/pong" class="btn">View</a>
+        </div>
+      </div>
+    </section>
+	
+      <section id="personal-projects">
+      <h2>Personal Projects</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="images/web1.png" alt="Ohbot Showtapes" />
+          <h3>Ohbot Showtapes</h3>
+          <p>Desigining and programming shows for an Animatronic.</p>
+          <a href="https://github.com/Ciaralooney/showtapesinprogress" class="btn">View</a>
+        </div>
+		
+		<div class="project-card">
+          <img src="images/web1.png" alt="Ohbot AI" />
+          <h3>Ohbot AI Assistant</h3>
+          <p>Creating an AI powered assistant with motion and working vision.</p>
+          <a href="https://github.com/Ciaralooney/ohbot-ai" class="btn">View</a>
+        </div>
+		
+      </div>
+    </section>
+	
+    <section id="web-projects">
+      <h2>Websites</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="images/web1.png" alt="CSS Project" />
+          <h3>CSS Project</h3>
+          <p>Responsive layout using Flexbox and Grid.</p>
+          <a href="project1/index.html" class="btn">View</a>
+        </div>
+        <div class="project-card">
+          <img src="images/web2.png" alt="JS Project" />
+          <h3>JavaScript Project</h3>
+          <p>Interactive Javascript features.</p>
+          <a href="project2/index.html" class="btn">View</a>
+        </div>
+        <div class="project-card">
+          <img src="images/web3.png" alt="Game Project" />
+          <h3>Interactive Game</h3>
+          <p>Fun browser-based game using JavaScript.</p>
+          <a href="web_dev_game_proj_1/index.html" class="btn">Play</a>
+        </div>
+        <div class="project-card">
+          <img src="images/web4.png" alt="Business Site" />
+          <h3>Michael Looney HACCP</h3>
+          <p>Professional business website redesign.</p>
+          <a href="michael_haccp/index.html" class="btn">Visit</a>
+        </div>
+        <div class="project-card">
+          <img src="images/web5.png" alt="Popmango" />
+          <h3>Popmango</h3>
+          <p>A template for a blog website</p>
+          <a href="popmango/popmango.html" class="btn">Explore</a>
+        </div>
+      </div>
+    </section>
 
-            <a href="">Redesigned an outdated website</a>
-        </p>
-        <p>
-            <h2>Business</h2>
-            <a href="michael_haccp/index.html">Michael Looney HACCP</a>
-        </p>
-        <p>
-            <h2>Just for fun</h2>
-            <a href="popmango/popmango.html">Popmango - 8 types of walkers</a> <br>
-            <img src="images/web5.png">
-        </p>
-    </article>
-</main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I am passionate about developing my career and bringing the best to the company I join. I have a proven ability to be persistent and have the drive to keep going in the face of difficult challenges. Furthermore, I excel in tasks due to my organised approach, ensuring efficient completion through meticulous adherence to guidelines.
+        My toolkit includes Python, Kotlin, Java, JavaScript, Node.js, MongoDB, SQL, Visual Paradigm, HTML, CSS, Database Management and more.
+      </p>
+    </section>
+
+    <section id="cv">
+      <h2>CV</h2>
+      <p>embedd cv here</p>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Ciara Looney. All rights reserved.</p>
+  </footer>
 </body>
 </html>
