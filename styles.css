@@ -188,14 +188,21 @@ footer {
         font-size: 0.9rem;
     }
 
+    .project-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .project-card {
-        width: 95%;
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto 20px;
         padding: 15px;
     }
 
     .app-projects img {
-        max-height: 200px;
-        object-fit: cover;
+        max-height: 400px;
+        object-fit: contain;
         width: 100%;
         border-radius: 8px;
     }
