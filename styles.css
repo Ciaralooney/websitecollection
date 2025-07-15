@@ -148,6 +148,13 @@ footer {
         width: 90%;
     }
 
+    .app-projects img {
+        max-height: 300px;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 8px;
+    }
+
     .hero h1 {
         font-size: 2.2rem;
     }
@@ -184,6 +191,13 @@ footer {
     .project-card {
         width: 95%;
         padding: 15px;
+    }
+
+    .app-projects img {
+        max-height: 200px;
+        object-fit: cover;
+        width: 100%;
+        border-radius: 8px;
     }
 
     h2 {
