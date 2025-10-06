@@ -140,8 +140,9 @@ footer {
     color: #ffffff;
     margin-top: 40px;
 }
+
 #personal-projects, #app-projects {
-  background-color: #f9fbfc;
+  background-color: #e6f4f3;
   padding: 40px 20px;
   border-radius: 10px;
 }
