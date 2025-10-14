@@ -8,11 +8,11 @@ body, html {
     scroll-behavior: smooth;
 }
 .pdf {
-        width: 100%;
-        aspect-ratio: 4 / 3;
-        height: 100%;
-        margin: 0;
-        padding: 0;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	height: 100%;
+	margin: 0;
+	padding: 0;
 }
 	
 h1, h2, h3, p {
@@ -139,6 +139,20 @@ footer {
     background-color: #2e3d49;
     color: #ffffff;
     margin-top: 40px;
+}
+
+.flair {
+  display: inline-block;
+  margin-top: 4px;
+  margin-bottom: 8px;
+  padding: 3px 8px;
+  background-color: #ffc0cb; /* soft pink */
+  color: #7a0049; /* deeper pink text */
+  font-size: 0.8em;
+  font-weight: 600;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /*
