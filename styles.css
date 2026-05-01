@@ -32,6 +32,27 @@ p {
     margin-bottom: 15px;
 }
 
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+/* Put images in one row */
+.image-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* space between images */
+  flex-wrap: nowrap; /* keeps them in one row */
+  margin-top: 15px;
+}
+
+.image-row img {
+  max-width: 20%; 
+  height: auto;
+  display: block;
+}
+
 /* Hero Section */
 .hero {
     background: linear-gradient(135deg, #2e8b8b, #82c4c3);
@@ -164,6 +185,13 @@ footer {
 
 
 @media only screen and (max-width: 768px) {
+   .image-row {
+    flex-wrap: wrap;
+  }
+
+  .image-row a {
+    flex: 1 1 45%; /* 2 per row */
+  }
     .project-grid {
         flex-direction: column;
         align-items: center;
@@ -190,6 +218,15 @@ footer {
 }
 
 @media only screen and (max-width: 480px) {
+  .image-row a {
+    flex: 1 1 100%; /* 1 per row */
+  }
+
+  .video-container iframe {
+    width: 100%;
+    height: auto;
+  }
+	
     html, body {
         font-size: 14px;
         padding: 0;
