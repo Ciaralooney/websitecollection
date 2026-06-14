@@ -209,9 +209,10 @@ footer {
         align-items: center;
     }
 
-    .project-card {
-        width: 90%;
-    }
+  .project-card {
+    width: 90% !important;
+    max-width: 400px;
+  }
 
     .app-projects img {
         max-height: 300px;
