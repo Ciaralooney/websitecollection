@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-IE">
+<head>
+    <meta charset="UTF-8">
+    <title>Trivia Time</title>
+    <!-- Linking the css file -->
+    <link rel="stylesheet" href="../styles.css">
+    <!-- Linking the favicon -->
+    <!-- Image Source: https://icons8.com/icon/wFfu6zXx15Yk/home -->
+    <link rel="icon" type="image/x-icon" href="../images/favicon.png">
+    <!-- Linking the javascript file -->
+    <script src="../javascript.js"></script>
+    <!-- Importing google fonts -->
+    <!-- Code Source: https://fonts.google.com/ -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <h1>Hi, I'm Ciara</h1>
+    <p>Software Developer | Designer | Creative Thinker</p>
+  </header>
+  <main>
+	  <article>
+		    <div class="video-container">
+		  <!-- Replace with YouTube embed once gameplay video is recorded -->
+			</div>
+      <p>A true or false trivia game for the Yoto Player. A Python server streams live audio to a physical card. When the card is inserted in the player 10 random questions are picked and they are read out one at a time. This is an audio game that uses the Yoto's two physical buttons and a voice asking the player questions.</p>
+      <p>The full design report for this project, including the design pillars, audience, core gameplay breakdown, and pacing decisions, is available as a download further down this page.</p>
+<h2>Design</h2>
+<p>The hardest part of this project wasn figuring out how to get real interactivity out of hardware that was never built for it. The Yoto's buttons only move forward and backward through the tracks on a card. They don't support jumping to two different places from one point. <img src="../images/yoto_trivia1.png" alt="Yoto Trivia 1" class="inline-image inline-image-right">So instead the server listens to live MQTT events from the player. It works out which button the player pressed based on where they land. It then immediately overrides playback to send them to the next question while keeping track of their score.</p>
+<p>Having the audio match the game mattered just as much as the logic. Questions and feedback are streamed in real time using a text to speech voice, so no two playthroughs ever sound quite the same. <img src="../images/yoto_trivia2.png" alt="Yoto Trivia 2" class="inline-image inline-image-left">Ten questions per game felt like the right length, long enough to feel like a proper game but short enough that an 8 to 12 year old won't lose interest halfway through.</p>
+<p>You can view the code <a href="https://github.com/Ciaralooney/Yoto-Interactive-Trivia-Card">here</a> if you want to see how it works.</p>
+
+      <h2>Downloads</h2>
+      <ul>
+        <li><a href="../files/Trivia Time Design Report.pdf">Design Report</a></li>
+      </ul>
+
+	  </article>
+  </main>
+  <footer>
+    <p>&copy; 2025 Ciara Looney.</p>
+  </footer>
+</body>
+</html>
