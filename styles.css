@@ -58,7 +58,11 @@ article ul li {
   flex-wrap: nowrap; /* keeps them in one row */
   margin-top: 15px;
 }
-
+.centered {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
 .image-row img {
   width: 100%;
   height: auto;
