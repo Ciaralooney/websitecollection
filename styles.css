@@ -7,7 +7,34 @@ body, html {
     background-color: #f6f7f9;
     scroll-behavior: smooth;
 }
+.play-button-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
 
+.play-button {
+  display: inline-block;
+  background-color: #ff69b4;
+  color: #ffffff;
+  font-family: 'Varela Round', sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 12px 32px;
+  border-radius: 50px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.play-button:hover {
+  background-color: #ff4da6;
+  transform: scale(1.05);
+}
+
+.play-button:active {
+  background-color: #e0399b;
+  transform: scale(0.98);
+}
 .pdf {
 	width: 100%;
 	height: 800px;
