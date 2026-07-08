@@ -36,7 +36,8 @@
       <p>The full design report for this project, including the design pillars, audience, core gameplay breakdown, and pacing decisions, is available as a download further down this page.</p>
 <h2>Design</h2>
 <p>The hardest part of this project wasn figuring out how to get real interactivity out of hardware that was never built for it. The Yoto's buttons only move forward and backward through the tracks on a card. They don't support jumping to two different places from one point. <img src="../images/yoto_trivia1.png" alt="Yoto Trivia 1" class="inline-image inline-image-right">So instead the server listens to live MQTT events from the player. It works out which button the player pressed based on where they land. It then immediately overrides playback to send them to the next question while keeping track of their score.</p>
-<p>Having the audio match the game mattered just as much as the logic. Questions and feedback are streamed in real time using a text to speech voice, so no two playthroughs ever sound quite the same. <img src="../images/yoto_trivia2.png" alt="Yoto Trivia 2" class="inline-image inline-image-left">Ten questions per game felt like the right length, long enough to feel like a proper game but short enough that an 8 to 12 year old won't lose interest halfway through.</p>
+<p>Having the audio match the game mattered just as much as the logic. Questions and feedback are streamed in real time using a text to speech voice, so no two playthroughs ever sound quite the same. <img src="../images/yoto_trivia2.png" alt="Yoto Trivia 2">
+	Ten questions per game felt like the right length, long enough to feel like a proper game but short enough that an 8 to 12 year old won't lose interest halfway through.</p>
 <p>You can view the code <a href="https://github.com/Ciaralooney/Yoto-Interactive-Trivia-Card">here</a> if you want to see how it works.</p>
 
       <h2>Downloads</h2>
