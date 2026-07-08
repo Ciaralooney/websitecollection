@@ -1,57 +1,145 @@
 <!DOCTYPE html>
-<html lang="en-IE">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Ship It!</title>
-    <!-- Linking the css file -->
-    <link rel="stylesheet" href="../styles.css">
-    <!-- Linking the favicon -->
-    <!-- Image Source: https://icons8.com/icon/wFfu6zXx15Yk/home -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.png">
-    <!-- Linking the javascript file -->
-    <script src="../javascript.js"></script>
-    <!-- Importing google fonts -->
-    <!-- Code Source: https://fonts.google.com/ -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ship it! - Ciara Looney</title>
+  <meta name="description" content="ONE LINE ABOUT THE PROJECT.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="games.css">
+      <!-- Linking the favicon -->
+    <!-- Image Source: https://icons8.com -->
+    <link rel="icon" type="image/x-icon" href="images/game-favicon.png">
 </head>
-<body>
-  <header class="hero">
-    <h1>Hi, I'm Ciara</h1>
-    <p>Software Developer | Designer | Creative Thinker</p>
-  </header>
-  <main>
-	  <article>
-		    <div class="video-container">
-		  <iframe width="560" height="315" src="https://www.youtube.com/embed/HkCwHldDaQ0?si=HrikzJ1TSBYzAl_r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-			</div>
-		  <!--
-		<div class="play-button-container">
-        	<a href="games/ship-it/index.html" class="play-button">Play Now</a>
-      	</div> -->
-      <p>Ship It! is an arcade game where you sort items off a conveyor belt into bins before time runs out. The goal is to sort as many items as you can within 60 seconds. It's a 2D web game built in Unity.</p>
-		  <p>The full design report for this project, including the design pillars, audience, core gameplay breakdown, and pacing decisions is available as a download further down this page.</p>
-       
-		  <h2>Design</h2>
-<p>The core loop is built around quick decision making rather than precision. Items move along the conveyor belt and the player only has a short window to recognise each one and sort it into the correct bin before it reaches the end of the belt. Capping the round at 60 seconds was a deliberate choice as I wanted it to be a quick game but the player has long enough in a round to figure out mistakes and improve.</p>
-<p>For the sprite I hand drew it and tore it out. I wanted it to have a scrapbook appearance. I think the sprite is too small for this to come across. So it's a lesson learned.</p>
-  
-	  <div class="image-row">
-<a href="images/web13.png"><img src="images/web11.png" alt="Ship It gameplay"></a>
-</div>
-		  <h2>Credits</h2>
-		  <p>Sprite, Background art and photos by me <br> Pixel Font: <a href="https://www.1001fonts.com/pixel-game-font.html">Pixel Game Font</a> by suhadidesign</p>
+<body class="light">
 
-	<h2>Downloads</h2>
-      <ul>
-        <li><a href="../downloads/Ship It! Design Report.pdf">Design Report</a></li>
-		  <li><a href="../downloads/V1 Design.pdf">V1 Design Notes (Note: The game has a placeholder name at this stage)</a></li>
-      </ul>
-	  </article>
-  </main>
-  <footer>
-    <p>&copy; 2025 Ciara Looney.</p>
-  </footer>
+<header class="topbar">
+  <a class="wordmark" href="/">Ciara Looney - Game Design</a>
+  <nav aria-label="Main">
+    <a href="/#games">Games</a>
+    <a href="/#about">About</a>
+    <a href="files/Ciara Looney Design CV 2026.pdf">CV</a>
+    <a href="mailto:ciaralooney7@gmail.com">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ============ HEADER ============ -->
+  <h1 class="page-head">Ship It!</h1>
+
+  <p>
+    Ship It! is an arcade game where you sort items off a conveyor belt into
+    bins before time runs out. Each round lasts 60 seconds, and the spawn rate
+    ramps as the round goes on, so the opening seconds teach you the game and
+    the final stretch tests how well you sort under pressure. It's a 2D web
+    game built in Unity.
+  </p>
+ 
+  <p class="meta"><strong>Genre:</strong> Arcade, score attack</p>
+  <p class="meta"><strong>Engine:</strong> Unity (2D, WebGL)</p>
+  <p class="meta"><strong>Team:</strong> Solo</p>
+  <p class="meta"><strong>My roles:</strong> Game Designer, Programmer, Artist</p> 
+  <p class="meta"><strong>Status:</strong> Playable</p>
+ 
+  <!-- Gameplay video -->
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/HkCwHldDaQ0" title="Ship It! gameplay video" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+ 
+  <div class="actions">
+    <!-- Uncomment when the WebGL build is live
+    <a class="btn" href="games/ship-it/index.html">Play the build</a>
+    -->
+    <a class="btn" href="../downloads/Ship It! Design Report.pdf">Read the design report</a>
+  </div>
+ 
+  <!-- ============ DESIGN GOALS ============ -->
+  <section>
+    <h2>Design goals</h2>
+    <p>
+      The core loop is built around quick decision making rather than
+      precision. I used Garneau's 14 Forms of Fun to pick the three types of
+      fun the game is built on, and every design decision serves them.
+    </p>
+    <ul>
+      <li>Application of Skill: The game tests fast recognition and accurate placement under time pressure. Item variety, bin count and conveyor speed all all create a challenge for the player without it being unfair.</li>
+      <li>Competition: The player competes against their own best score and the timer, not another player.</li>
+      <li>Advancement and Completion: Each run is short and ends in a clear result. When the player finishes and sees their score they will want to try beat it which is what gives the game its replayability.</li>
+    </ul>
+  </section>
+ 
+  <!-- ============ KEY DESIGN DECISIONS ============ -->
+  <section>
+    <h2>Ramping spawn rate</h2>
+ 
+    <p><strong>Result:</strong> The round teaches itself. New players learn the sorting mechanic early on and and by the final stretch every player is sorting flat out under pressure.</p>
+    <p><strong>Problem:</strong> At one stage I had the items spawning at the same rate. I tried to find one rate that worked for the whole game but sometimes it would be too fast at the start of the game or too slow by the end.</p>
+    <p><strong>Solution:</strong> The spawn rate increases over the course of the round. Early on items spawn slowly so the player can learn how to sort them. By the halfway point the player has to commit to sorting decisions quickly and as the game finishes up, the spawn rate peaks.</p>
+ 
+    <img class="centered" src="/images/web11.png" alt="Ship It! gameplay with items moving along the conveyor belt" loading="lazy">
+  </section>
+ 
+  <section>
+    <h2>Scoring that punishes spamming</h2>
+    <p><strong>Result:</strong> Players make real sorting decisions instead of dumping items into the nearest bin to clear the belt.</p>
+    <p><strong>Problem:</strong> Under time pressure, players may be tempted to grab everything and throw into the closest bin. If there wasn't a penalty to this then that strategy might work.</p>
+    <p><strong>Solution:</strong> Putting an item in the correct bin is worth 10 points, but putting it in the wrong bin costs the player 5 points and an item reaching the end of the belt costs the player 3 points. A wrong guess costs more than letting an item go. So spamming to clear the belt is never the safe option.</p>
+  </section>
+ 
+  <section>
+    <h2>The 60 second round</h2>
+    <p><strong>Result:</strong> Every session is short, ends in a clear result and is tempting to play again.</p>
+    <p><strong>Problem:</strong> The round needed to be long enough for a player to notice their own mistakes and improve within a single run. It also needed to be short enough that you could play a few rounds at once.</p>
+    <p><strong>Solution:</strong> I capped the round at 60 seconds. Combined with the ramping spawn rate I believe that's enough time for a full playthrough.</p>
+  </section>
+ 
+  <!-- ============ ITERATION ============ -->
+  <section>
+    <h2>Iteration</h2>
+    <p>
+      For the character sprite I hand drew each frame, then tore it out. I
+      wanted it to have a scrapbook appearance, with the background in a rustic
+      pixel art style behind it. The torn-paper effect doesn't come across as clear as I wanted it to as I underesitmated the sprite size on screen, so it's a lesson learned.
+      The <a href="../downloads/V1 Design.pdf">V1 design notes</a> show where the game started, back when it still had a placeholder name.
+    </p>
+	<p>After many playtests I did slow down the item spawning rate. As I felt it was impossible to keep up with. I was able to find a balance where it was still challenging but possible.</p>
+ 
+    <div class="image-row">
+      <img src="/images/ship-it-early.png" alt="Ship it screenshot" loading="lazy">
+      <img src="/images/web13.png" alt="Ship it screenshot" loading="lazy">
+    </div>
+  </section>
+ 
+  <!-- ============ TAKEAWAYS ============ -->
+  <section>
+    <h2>What I learned</h2>
+    <p>
+      The ramping spawn rate is the thing I'd keep. It teaches the player safely first while giving them a challenge later. The thing I'd do differently is
+      testing art at actual gameplay size before committing to a style. The hand-torn sprite is one of my favourite parts of the project and nobody
+      playing the game can see the details put into it.
+    </p>
+  </section>
+ 
+  <section>
+    <h2>Credits</h2>
+    <p>Sprite, background art and photos by me.<br>
+    Pixel font: <a href="https://www.1001fonts.com/pixel-game-font.html">Pixel Game Font</a> by suhadidesign.</p>
+  </section>
+ 
+
+
+  <div class="actions">
+    <a class="btn" href="/">Back to all games</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 Ciara Looney · <a href="https://github.com/Ciaralooney">GitHub</a></p>
+</footer>
+
 </body>
 </html>
