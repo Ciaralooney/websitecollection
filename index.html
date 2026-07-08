@@ -1,283 +1,207 @@
 <!DOCTYPE html>
-<html lang="en-IE">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Portfolio</title>
-    <!-- Linking the css file -->
-    <link rel="stylesheet" href="styles.css">
-    <!-- Linking the favicon -->
-    <!-- Image Source: https://icons8.com/icon/wFfu6zXx15Yk/home -->
-    <link rel="icon" type="image/x-icon" href="images/favicon.png">
-    <!-- Linking the javascript file -->
-    <script src="javascript.js"></script>
-    <!-- Importing google fonts -->
-    <!-- Code Source: https://fonts.google.com/ -->
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciara Looney - Game Design</title>
+  <meta name="description" content="Ciara Looney is a game designer. Playable projects, design documentation and process notes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="games.css">
 </head>
 <body>
-  <header class="hero">
-    <h1>Hi, I'm Ciara</h1>
-    <p>Software Developer | Designer | Creative Thinker</p>
-  </header>
 
-  <nav class="navbar">
-    <a href="#web-projects">Websites</a>
-    <a href="#game-projects">Game Development</a>
-    <a href="#app-projects">App Development</a>
-    <a href="#physical-projects">Physical/Arduino Projects</a>
-	<a href="#ai-projects">AI Projects</a>
-    <a href="#projects">College Projects</a>
+<header class="topbar">
+  <a class="wordmark" href="#top">Ciara Looney - Game Design</a>
+  <nav aria-label="Main">
+    <a href="#games">Games</a>
     <a href="#about">About</a>
-    <a href="#CV">CV</a>
+    <a href="/Ciara-Looney-CV.pdf">CV</a>
+    <a href="mailto:hello@example.com">Contact</a>
   </nav>
-  <main>
-  
-    <section id="web-projects">
-      <h2>Websites</h2>
-      <div class="project-grid">
-	  	<div class="project-card">
-          <img src="images/web6.png" alt="Hoops and Yoyo homepage" />
-          <h3>Hoops & Yoyo Game Collection</h3>
-			<span class="flair">Personal Project</span>
-          <p>A playful collection of hoops & yoyo themed browser games built with HTML, CSS, and JavaScript, reminiscent of classic Flash-era games.</p>
-          <a href="https://hoopsandyoyo-509e1.web.app/" class="btn">View</a>
-        </div>
-		  
-		  <div class="project-card">
-          <img src="images/minecraft.png" alt="Minecraft seed homepage" />
-          <h3>Minecraft 3DS Seed Website</h3>
-			<span class="flair">Personal Project</span>
-          <p>A website compiling a unique collection of 3DS Minecraft seeds. Utilising JavaScript a user can filter to find their desired seed.</p>
-          <a href="https://minecraft-3ds.web.app/" class="btn">View</a>
-        </div>
-		  
-		  <div class="project-card">
-          <img src="images/web7.png" alt="Minecraft Stack Calculator" />
-          <h3>Minecraft Stack Calculator</h3>
-			<span class="flair">Personal Project</span>
-          <p>Calculates how many stacks of materials you will need from a number. Useful for players following building tutorials.</p>
-          <a href="https://minecraft-stack.web.app/" class="btn">View</a>
-        </div>
-		
-        <div class="project-card">
-          <img src="images/web8.png" alt="Furby site" />
-          <h3>Furby Boom Personality Changer</h3>
-			<span class="flair">Personal Project</span>
-          <p>A web interface designed to control Furby Boom personalities using the ComAir ultrasonic communication system.</p>
-          <a href="https://furby-boom.web.app/index.html" class="btn">View</a>
-        </div>
-		
-		<div class="project-card">
-          <img src="images/web9.png" alt="Email site" />
-          <h3>Certificate and Email Automation</h3>
-          <p>This site automates the creation of participant certificates and the process of emailing them using Flask and Python for the backend. I created a user interface using HTML so users could easily upload files.</p>
-          <a href="https://www.linkedin.com/posts/ciara-looney_iwork4dell-emea-dellinterns2025-activity-7333850472077811712-0ezs?" class="btn">View</a>
-        </div>
-		
-		<div class="project-card">
-          <img src="images/web3.png" alt="Business Site" />
-          <h3>Michael Looney HACCP</h3>
-          <p>Professional business website redesign.</p>
-          <a href="https://michael-looney.web.app/" class="btn">View</a>
-        </div>
-		
-        <div class="project-card">
-          <img src="images/web2.png" alt="JS Project" />
-          <h3>JavaScript Project</h3>
-          <p>Interactive Javascript features.</p>
-          <a href="project2/index.html" class="btn">View</a>
-        </div>
-        <div class="project-card">
-          <img src="images/web4.png" alt="Game Project" />
-          <h3>Interactive Game</h3>
-          <p>Fun browser-based game using JavaScript.</p>
-          <a href="web_dev_game_proj_1/index.html" class="btn">Play</a>
-        </div>
-        <div class="project-card">
-          <img src="images/web1.png" alt="CSS Project" />
-          <h3>CSS Project</h3>
-          <p>Responsive layout using Flexbox and Grid.</p>
-          <a href="project1/index.html" class="btn">View</a>
-        </div>
-      </div>
-    </section>
-    <section id="game-projects">
-      <h2>Video Games</h2>
-      <div class="project-grid">
-	  	<div class="project-card">
-          <img src="images/gameonds.png" alt="Snake NDS Game" />
-          <h3>Smooth Snake Nintendo DS Game</h3>
-			<span class="flair">Personal Project</span>
-          <p>A stylus-controlled snake game for the Nintendo DS made with C.</p>
-          <a href="smooth-snake/index.html" class="btn">View</a>
-        </div>
-    </section>
-<section id="app-projects">
-	<h2>App Development</h2>
- 	<div class="project-grid">
-	<div class="project-card">
-          <img src="images/pocket_pet_hoops.jpg" alt="Virtual Pet App" />
-          <h3>Pocket Pet app</h3>
-          <p>A virtual pet app developed in Kotlin, utilising room database for keeping track of each pet's details </p>
-          <a href="pocket-pets/index.html" class="btn">View</a>
-        </div>
-	
-	<div class="project-card">
-          <img src="images/MTU_booking_app.jpg" alt="MTU Booking App" />
-          <h3>MTU Booking App</h3>
-          <p>This app is designed for trainees and trainers to organise their timetable and bookings for the MTU arena.</p>
-          <a href="https://github.com/Ciaralooney/agile-project" class="btn">View</a>
-        </div>
-		
-	<div class="project-card">
-          <img src="images/ACT_AI_app_payment.jpg" alt="ACT Mobile Project" />
-          <h3>ACT Mobile</h3>
-          <p>Agentic Corporate Trader Mobile App developed in Kotlin, to be paired with Agentic Corporate Trader (ACT) system </p>
-          <a href="https://github.com/Ciaralooney/ACT_mobile" class="btn">View</a>
-        </div>
-	
-	<div class="project-card">
-          <img src="images/sports_app_screenshot.png" alt="Sports Team App" />
-          <h3>Sports Team app</h3>
-          <p>My first app. This was developed in Kotlin. I showcase styling and animations I have learned.</p>
-          <a href="" class="btn">View</a>
-        </div>
-      </div>
-    </section>
-	<section id="physical-projects">
-      <h2>Physical Projects</h2>
-		<!--
-      <div class="project-grid">
-	  	<div class="project-card">
-          <img src="images/comingsoon.png" alt="Plush" />
-          <h3>Plush Reacting To Touch</h3>
-          <p>A shy plush creature that slowly glows like it’s blushing when you gently touch its head. Made with an arduino</p>
-          <a href="" class="btn">View</a>
-        </div>
-      </div>
-		-->
-		<div class="project-grid">
-			<div class="project-card">
-			  <img src="images/yoto_trivia1.png" alt="True or False Trivia Yoto card" />
-			  <h3>Yoto Trivia Game</h3>
-			  <span class="flair">Personal Project</span>
-			  <p>An interactive trivia game for the Yoto player. A Python server streams live audio to a physical card with random questions every game, instant feedback, and a final score reveal.</p>
-			  <a href="trivia_time/index.html" class="btn">View</a>
-			</div>
-			<div class="project-card">
-			  <img src="images/yoto_adventure1.png" alt="Jungle Adventure Yoto card" />
-			  <h3>Choose Your Own Adventure Yoto Game</h3>
-			  <span class="flair">Personal Project</span>
-			  <p>A choose your own adventure audio game for the Yoto player. Insert the card, listen to the story, and turn the knob to choose your path with a different ending every time.</p>
-			  <a href="choose your own adv/index.html" class="btn">View</a>
-			</div>
-		  </div>
-    </section>
-	    <section id="ai-projects">
-      <h2>AI Projects</h2>
-      <div class="project-grid">
-		<div class="project-card">
-          <img src="images/jira.gif" alt="Jira Automation" />
-          <h3>Jira AI Automation</h3>
-          <p>Web program powered by Python, Flask and JavaScript that uses Llama AI to generate a title, description, and acceptance criteria from user input. Automated the creation and editing of Jira tickets utilizing the Jira API</p>
-          <a href="https://www.linkedin.com/posts/ciara-looney_dell-python-flask-activity-7383780723905683457-XV52?" class="btn">View</a>
-        </div>
-	
-		  <!--
-        <div class="project-card">
-          <img src="images/ohbot1.gif" alt="Ohbot Showtapes" />
-          <h3>Ohbot Showtapes</h3>
-          <p>Desigining and programming shows for an Animatronic.</p>
-          <a href="https://github.com/Ciaralooney/showtapesinprogress" class="btn">View</a>
-        </div>
-		  -->
-		
-		<div class="project-card">
-          <img src="images/ohbot2.gif" alt="Ohbot AI" />
-          <h3>Ohbot AI Assistant</h3>
-			<span class="flair">Personal Project</span>
-          <p>Creating an AI powered assistant with motion and working vision using Python and Llama AI.</p>
-          <a href="https://github.com/Ciaralooney/ohbot-ai" class="btn">View</a>
-        </div>
-      </div>
-    </section>
-	
-    <section id="projects">
-      <h2>College Projects</h2>
-      <div class="project-grid">
-        <div class="project-card">
-          <img src="images/ACT_logo.png" alt="Agentic Corporate Trader Project" />
-          <h3>Agentic Corporate Trader</h3>
-          <p>The development of an Agentic Corporate Trader (ACT) system driven by Artificial Intelligence (AI). Users will be able to directly invest in crypto and stocks using AI-assisted tools.</p>
-          <a href="https://github.com/Ciaralooney/ACT-AI-G19" class="btn">View</a>
-        </div>
-		
-		<div class="project-card">
-          <img src="images/MTU_booking_page.png" alt="Admin website" />
-          <h3>Admin Website for the MTU Booking App</h3>
-          <p>Admin can use the website to make changes to the database, to be paired with the MTU Booking App</p>
-          <a href="https://github.com/Ciaralooney/agile-admin-website" class="btn">View</a>
-        </div>
-		
-		<div class="project-card">
-          <img src="images/booking_site.png" alt="Workshop booking site" />
-          <h3>Workshop Booking Site</h3>
-          <p>A booking website using mongodb and node.js</p>
-          <a href="https://github.com/Ciaralooney/bookingsite" class="btn">View</a>
-        </div>
-		
-		<div class="project-card">
-          <img src="images/pong.png" alt="Pong game" />
-          <h3>Pong Game</h3>
-          <p>An object oriented approach to a pong game. Includes multiplayer and save file features. Created using Java</p>
-          <a href="https://github.com/Ciaralooney/pong" class="btn">View</a>
-        </div>
-	  
-	  <div class="project-card">
-          <img src="images/python1.png" alt="Python Project" />
-          <h3>Attendance Program</h3>
-          <p>A Python tool that allows users to log in with a username and password, record student attendance by module, and generate detailed statistics.</p>
-          <a href="https://github.com/Ciaralooney/attendance_program" class="btn">View</a>
-        </div>
-	  
-	  <div class="project-card">
-          <img src="images/comingsoon.png" alt="Python Project" />
-          <h3>Python Scripting</h3>
-          <p>A Python scripting project with multiple scripts featuring text and list manipulation, random elimination gameplay, automated folder and file management with backups, and a database-driven management system with user authentication, admin controls, and persistent data storage.</p>
-          <a href="https://github.com/Ciaralooney/python-compilation" class="btn">View</a>
-        </div>
-      </div>
-    </section>
-	
-    <section id="about">
-      <h3>About Me</h3>
-      <p>
-        I am passionate about developing my career and bringing the best to the company I join. I have a proven ability to be persistent and have the drive to keep going in the face of difficult challenges. Furthermore, I excel in tasks due to my organised approach, ensuring efficient completion through meticulous adherence to guidelines.
-        <br> My toolkit includes Python, Kotlin, Java, JavaScript, Node.js, MongoDB, SQL, Visual Paradigm, HTML, CSS, Database Management and more.
-      </p>
-    </section>
+</header>
 
-    <section id="CV">
-      <h2>CV</h2>
-	  <object class="pdf" data="files/Ciara_CV.pdf" width="800" height="500"> </object>
-    </section>
-  </main>
+<main id="top">
 
-  <footer>
-    <p>&copy; 2025 Ciara Looney.</p>
-  </footer>
-<script language="JavaScript" type="text/javascript" src="https://gnrcounter.com/counter.php?accId=bc00ae6b321d31fa6482116dd0574535"></script>
-<noscript>
-<a href="https://gnrcounter.com" title="Web Analytics">Web Analytics</a>
-</noscript>
+  <!-- ============ PROJECTS ============ -->
+  <section id="games">
+    <h1 class="page-head">Games</h1>
+
+    <article class="project">
+      <div class="project-text">
+        <h2>Ship It!</h2>
+        <p>
+          A game with short rounds where you quickly sort items. Items come down a conveyor belt quickly and the player must sort as many items before the time runs out.
+		  I built the difficulty curve around three of <strong>Garneau's forms of fun</strong>: application of skill, competition and completion. Every tuning decision in the GDD ties back to
+          one of them.
+        </p>
+        <p class="meta"><strong>Genre:</strong> Arcade, time attack</p>
+        <p class="meta"><strong>Engine:</strong> Unity</p>
+        <p class="meta"><strong>Team:</strong> Solo</p>
+        <p class="meta"><strong>My roles:</strong> Game Designer, Programmer, Artist</p>
+      </div>
+      <div class="project-media">
+        <div class="video">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/iBnv-3vcbUc?si=YMxIrwc-8JdTuWYo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="actions">
+          <!-- <a class="btn" href="/ship-it">Play</a> -->
+          <a class="btn" href="ship-it.html">Project page</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-text">
+        <h2>Level Design Log</h2>
+        <p>
+          A level design log for a 2D wall-jump platformer with five levels. Each level is built to
+          <strong>teach a new mechanic without tutorial prompts</strong>. A level introduces one
+          idea, tests it on its own, then mixes it with what came before. I greybox every
+          level before any art goes in, and I write up the layout decisions as I make them.
+          The page grows as the project does.
+        </p>
+        <p class="meta"><strong>Genre:</strong> 2D platformer</p>
+        <p class="meta"><strong>Engine:</strong> Unity</p>
+        <p class="meta"><strong>Team:</strong> Solo</p>
+        <p class="meta"><strong>My roles:</strong> Level Designer</p>
+      </div>
+      <div class="project-media">
+        <img src="/images/level4v4.png" alt="Greybox layout of a wall-jump platformer level" loading="lazy">
+        <div class="actions">
+          <a class="btn" href="level-design.html">Read More</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-text">
+        <h2>Hop Hop Hop!</h2>
+        <p>
+          An arcade survival game where the water is the enemy. Lilypads sink under the frog
+          and break quickly, so no spot is safe for long. The frog's tongue only
+          fires the way the frog is facing which makes catching flies
+          <strong>about positioning and not reflexes</strong>. The player is trying to survive as long as possible and depending on how long they last they may earn a bronze,
+          silver or gold tier.
+        </p>
+        <p class="meta"><strong>Genre:</strong> Arcade, survival</p>
+        <p class="meta"><strong>Engine:</strong> Unity</p>
+        <p class="meta"><strong>Team:</strong> Solo</p>
+        <p class="meta"><strong>My roles:</strong> Game Designer, Programmer, Artist</p>
+      </div>
+      <div class="project-media">
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/v7ScotNOhiY?si=zi5aUKi6BHN1pHWc" title="Hop Hop Hop! gameplay video" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="actions">
+          <!-- <a class="btn" href="/hophophop">Play</a> -->
+          <a class="btn" href="hophophop.html">Project page</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-text">
+        <h2>Sky High</h2>
+        <p>
+          A physics stacking game where <strong>thin pieces score more and
+          topple easier</strong>. If you want a high score every placement is a bet. I tuned the shapes and scoring so
+          the safe moves aren't as rewarding as risky ones and the tower falling always feels like the player's responsibility.
+        </p>
+        <p class="meta"><strong>Genre:</strong> Physics, arcade</p>
+        <p class="meta"><strong>Engine:</strong> Unity</p>
+        <p class="meta"><strong>Team:</strong> Solo</p>
+        <p class="meta"><strong>My roles:</strong> Game Designer, Programmer</p>
+      </div>
+      <div class="project-media">
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/04yKc0lYsok?si=6LVQEAtELDJgeHC8" title="Sky High gameplay video" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="actions">
+          <!-- <a class="btn" href="sky-high.html">Play</a> -->
+          <a class="btn" href="/sky-high">Project page</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="project">
+      <div class="project-text">
+        <h2>Smooth Snake</h2>
+        <p>
+          A game for the Nintendo DS that can run on real hardware. The snake follows the stylus smoothly instead of being locked to a grid, which changes the whole feel of the game. The score display is drawn pixel by pixel in C, with no image files at all and a persistent save state keeps your best score between play sessions.
+        </p>
+        <p class="meta"><strong>Genre:</strong> Arcade</p>
+        <p class="meta"><strong>Platform:</strong> Nintendo DS</p>
+        <p class="meta"><strong>Team:</strong> Solo</p>
+        <p class="meta"><strong>My roles:</strong> Game Designer, Programmer, Artist</p>
+      </div>
+      <div class="project-media">
+        <div class="video">
+          <iframe src="https://www.youtube.com/embed/TUFTvbs3Aeo?si=6zKzoYVtrzw1woGD" title="Smooth Snake gameplay video on Nintendo DS" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="actions">
+          <a class="btn" href="downloads/Smooth Snake.nds">Download</a>
+          <a class="btn" href="/smooth-snake/">Project page</a>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- ============ MORE ============ -->
+  <section class="more">
+    <h2>More projects</h2>
+    <div class="mini-list">
+      <article class="mini">
+        <h3>Trivia Time</h3>
+        <p class="meta"><strong>Platform:</strong> Yoto player · Audio game · Ages 8 to 12</p>
+        <p>
+          A screen-free True or False trivia game streamed live to a physical Yoto card.
+          Questions are pulled at random each round, so no two plays of the card sound
+          the same.
+        </p>
+        <div class="actions">
+          <a class="btn" href="trivia_time/index.html">Project page</a>
+        </div>
+      </article>
+
+      <article class="mini">
+        <h3>Jungle Adventure</h3>
+        <p class="meta"><strong>Platform:</strong> Yoto player · Audio game· Ages 6 to 9</p>
+        <p>
+          A branching audio adventure told through the Yoto's knob and speaker. Three
+          stories with five decision points each, so the same card ends differently
+          every time you play it.
+        </p>
+        <div class="actions">
+          <a class="btn" href="choose%20your%20own%20adv/index.html">Project page</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <h2>About</h2>
+    <p>
+      I'm a game designer who comes from a software development background and have a lifelong love of games. I care about how a game feels to play as much as how it works underneath, and I
+      can build what I design: Unity, C, Python, JavaScript and Kotlin are just some of my skills.
+    </p>
+	<p>I care about why games are fun and the design choices that make them that way. This is what I want to do for a living. Every project here was made in my own time because I love this craft. </p>
+    <p>
+      I hold EU and US citizenship and I'm open to relocating for the right role.
+    </p>
+    <div class="actions">
+      <a class="btn" href="mailto:hello@example.com">Get in touch</a>
+      <a class="btn" href="/Ciara-Looney-CV.pdf">View CV</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>© 2026 Ciara Looney · <a href="https://github.com/Ciaralooney">GitHub</a></p>
+</footer>
+
 </body>
 </html>
-
-
-
-
-
-
-
