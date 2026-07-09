@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hop Hop Hop! - Ciara Looney</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="games.css">
+      <!-- Linking the favicon -->
+    <!-- Image Source: https://icons8.com -->
+    <link rel="icon" type="image/x-icon" href="images/game-favicon.png">
+</head>
+<body class="light">
+
+<header class="topbar">
+  <a class="wordmark" href="/">Ciara Looney - Game Design</a>
+  <nav aria-label="Main">
+    <a href="/#games">Games</a>
+    <a href="/#about">About</a>
+    <a href="files/Ciara Looney Design CV 2026.pdf">CV</a>
+    <a href="mailto:ciaralooney7@gmail.com">Contact</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ============ HEADER ============ -->
+  <h1 class="page-head">Hop Hop Hop!</h1>
+
+  <p>Hop Hop Hop! is an arcade game where you try to last as long as you can without falling into the water. You hop along lilypads and eat flies to gain lives. Once you land on a lilypad
+	  it breaks after 3 seconds, and this happens quicker as the game progresses. So the start of the game gives you space to learn the game mechanics and it tests you later as you have to react faster. It's a 2D web game built in Unity.</p>
+
+  <p class="meta"><strong>Genre:</strong>Survival</p>
+  <p class="meta"><strong>Engine:</strong>Unity</p>
+  <p class="meta"><strong>Team:</strong>Solo</p>
+  <p class="meta"><strong>My roles:</strong> Game Designer, Programmer, Artist</p>
+  <p class="meta"><strong>Status:</strong>Released</p>
+
+  <!-- Gameplay video -->
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/v7ScotNOhiY?si=zi5aUKi6BHN1pHWc" title="Hop Hop Hop gameplay video" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+  <div class="actions">
+    <!--  <a class="btn" href="#">Play the build</a> -->
+    <a class="btn" href="../downloads/Hop Hop Hop! Design Report.pdf">Read the design report</a>
+  </div>
+
+  <!-- ============ DESIGN GOALS ============ -->
+  <section>
+    <h2>Design goals</h2>
+    <p>The core loop is built around quick decision making and precision. I used Garneau's 14 Forms of Fun to pick the three types of
+      fun the game is built on and every design decision serves them.</p>
+    <ul>
+      <li>Thrill of Danger: Once you land on a pad it starts to sink. If you stay too long it may cost you a life but if you move too quickly you may go in the wrong
+		direction. Since the lilypads break more quickly as the game goes on the risk never goes down.</li>
+      <li>Application of Ability: You are hopping in a grid-based map. The tongue attack is aim-based as its tied to the direction the frog is facing. So, in order
+		to eat a fly, it comes down to precision as you must aim correctly while the lilypad doesn’t break underneath you.</li>
+      <li>Advancement and Completion: Progress is tracked through a timer. There is also a bronze, silver and gold tier. Every run clearly tells you what you achieved and what you could do if you did a bit better next time.</li>
+    </ul>
+  </section>
+
+  <!-- ============ KEY DESIGN DECISIONS ============ -->
+  
+  <section>
+    <h2>Increasing the challenge with the lilypads</h2>
+    <p><strong>Result:</strong> Every time you player there is a constant pressure because as soon as you land on a lilypad it begins breaking. If it breaks while you're on it you lose a life. Progress is measured by how long you survive, so you are never idle.</p>
+    <p><strong>Problem:</strong> An early version scored the game by counting how many lilypads you hopped, but even as I was testing the game I realised nothing pushed the player forward. There was no reason to play as there was no pressure and no reason to continue.</p>
+    <p><strong>Solution:</strong> I changed the core mechanic from counting pads hopped to time survived, I also made the lilypads dangerous. At the start of the game you have 3 seconds to leave before the pad sinks under you. As the game goes on this shrinks to 1.2 seconds. The early game teaches you the controls and the late game tests how well you can play. Pads darken and shrivel as their time runs out which gives the player a visual warning. Survival time is split into bronze, silver and gold tiers to give you a target to beat on the next run.</p>
+    <img class="centered" src="/images/hop2.png" alt="Hop Hop Hop gameplay" loading="lazy">
+  </section>
+  <section>
+    <h2>Directional Based Attacks</h2>
+    <p><strong>Result:</strong> Catching a fly is a real skill test. Each catch is a risk you choose to take, it is not something you can quickly grab</p>
+    <p><strong>Problem:</strong> The first version of eating was standing on the fly's pad and pressing space. There was no aiming and no risk as you could grab flies very quickly.</p>
+    <p><strong>Solution:</strong> The tongue is now tied to the direction the frog is facing and space fires it at the adjacent pad. You can't hop or turn mid-attack and the pad under you is still breaking while you commit to the catch. But it is still worth trying to catch flies as they give you a life, which makes the careful aiming and quick timing worth it.</p>
+    <img class="centered" src="/images/hop3.png" alt="Hop Hop Hop gameplay" loading="lazy">
+  </section>
+
+
+  <!-- ============ ITERATION ============ -->
+  <section>
+    <h2>Iteration</h2>
+    <p>
+      I had the frog sprite I wanted to use quite early on in development. I wanted to find a lilypad that matched the sprite's art atyle but I wasn't able to so I decided to draw my own. I would draw a lilypad, use it in unity during testing and if I didn't like it after using it for a while I would draw another. I had to draw 3 before I found one that I felt matched the sprite's style.
+    </p>
+	<p>The pond itself went through the biggest rework. The first version was an endless scrolling pond where many pads spawned around the frog. But really I found pads would spawn directly underneath the frog no matter which direction you went, it basically made a perfect bridge for the frog every time which killed the mechanic of trying to survive. I rebuilt it as a fixed single-screen pond with a static camera and a grid of pads with water inbetween them. I also changed it so pads regrew after sinking.</p>
+    <div class="image-row">
+      <img src="/images/hophophopold.png" alt="Hop Hop Hop screenshot" loading="lazy">
+      <img src="/images/hop1.png" alt="Hop Hop Hop screenshot" loading="lazy">
+    </div>
+  </section>
+
+  <!-- ============ TAKEAWAYS ============ -->
+  <section>
+    <h2>What I learned</h2>
+    <p>
+      Building the difficulty into the core mechanic is something I will carry with me. The thing I'd do differently is decide the shape of the play space earlier. Switching from a scrolling pond to a fixed screen halfway through meant rewriting a lot of code. I could have avoided this if I had planned out the game more carefully in the first place. <br> If I come back to this game the first thing I'd change is the flies. Right now they just appear on a lilypad. I'd like them to fly in from off screen and land, so you can see one coming and plan accordingly. 
+    </p>
+  </section>
+
+  <div class="actions">
+    <a class="btn" href="/">Back to all games</a>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2026 Ciara Looney · <a href="https://github.com/Ciaralooney">GitHub</a></p>
+</footer>
+
+</body>
+</html>
