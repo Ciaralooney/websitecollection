@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smooth Snake - Ciara Looney</title>
-  
+  <meta name="description" content="ONE LINE ABOUT THE PROJECT.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
@@ -29,27 +29,80 @@
 
   <!-- ============ HEADER ============ -->
   <h1 class="page-head">Smooth Snake</h1>
-		    <div class="video-container">
-		  <iframe width="560" height="315" src="https://www.youtube.com/embed/TUFTvbs3Aeo?si=6zKzoYVtrzw1woGD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-			</div>
-      <p>A snake game for the Nintendo DS inspired by the Snake Game by OneMotion, a Flash game I used to play growing up. When Flash was discontinued the original went offline, so I made my own version I could play again. The snake follows your mouse rather than moving in a grid, which is the mechanic that always made the original feel different from other snake games.</p>
-<p>The full design report for this project, including the design pillars, audience, core gameplay breakdown, and pacing decisions, is available as a download further down this page.</p>
-        
-		  <h2>Design</h2>
-<p>Working within the limitations of the DS hardware meant I had to think carefully about which parts of the original game were essential to the feel of it. The mouse controlled movement was non-negotiable. That's what made the original distinct. Everything else was secondary to keeping that intact. I knew this would translate well into a DS port using the stylus and touchscreen.</p>
-<p>There are two things missing compared to the original: background music and obstacles. I wasn't able to figure out audio for a first DS game, and obstacles would have needed more experience with the platform to implement well. Honestly neither of them takes away from the gameplay. I made this for myself and I'm very happy to have a version of this game I can play easily once again.</p> 
-	<p>You can download it <a href="https://github.com/Ciaralooney/Smooth-Snake-NDS">here</a> if you want to try it.  </p>
-	<h2>Downloads</h2>
-      <ul>
-        <li><a href="../downloads/Smooth Snake Design Report.pdf">Design Report</a></li>
-        <li><a href="../downloads/Smooth Snake.nds">NDS File</a></li>
-      </ul>  
-		  <div class="image-row">
-<a href="../images/snake2.png"><img src="../images/snake2.png" alt="Snake 2"></a>
-<a href="../images/snake3.png"><img src="../images/snake3.png" alt="Snake 3"></a>
-<a href="../images/snake4.png"><img src="../images/snake4.png" alt="Snake 4"></a>
-<a href="../images/snakefail.png"><img src="../images/snakefail.png" alt="Snake fail"></a>
-</div>
+
+  <p>
+    This is a game that uses the Nintendo DS' touchscreen. It is a remake from a Flash game I played growing up that has been taken offline since Flash was discontinued. Instead of grid-based movement, the snake follows the stylus smoothly. In the original game the snake followed the players mouse and this made is so unique. I wanted to recreate this game and always be able to have a way play it so I built it in C with no engine for the Nintendo DS as I thought the touchscreen would work well in place of using a mosue to control the snake.   
+  </p>
+
+  <p class="meta"><strong>Genre:</strong> Arcade</p>
+  <p class="meta"><strong>Engine:</strong> Built in C with BlocksDS</p>
+  <p class="meta"><strong>Team:</strong> Solo</p>
+  <p class="meta"><strong>My roles:</strong> Game Designer, Programmer, Artist</p>
+  <p class="meta"><strong>Status:</strong> Released</p>
+
+  <!-- Gameplay video -->
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/TUFTvbs3Aeo?si=6zKzoYVtrzw1woGD" title="Smooth Snake gameplay video" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+  <div class="actions">
+    <a class="btn" href="downloads/Smooth Snake.nds">Download the game</a>
+    <a class="btn" href="downloads/Smooth Snake Design Report.pdf">Read the Design Report</a>
+  </div>
+
+  <section>
+    <h2>Design goals</h2>
+    <p>The core loop is built around self-inflicted difficulty. I used Garneau's 14 Forms of Fun to pick the three types of
+      fun the game is built on and every design decision serves them.</p>
+    <ul>
+      <li>Advancement & Completion: Players will be satisfied as the score climbs and snake grows longer</li>
+      <li>Application of Ability: The player has to maneuver around the snake’s body to get apples. Players need to plan their path in order to avoid trapping themselves.</li>
+      <li>Thrill of Danger: The constant risk of hitting the snake’s own body creates genuine tension, especially as the game progresses</li>
+    </ul>
+  </section>
+
+<!-- ============ KEY DESIGN DECISIONS ============ -->
+  <section>
+    <h2>Stylus movement</h2>
+    <p><strong>Result:</strong> The snake follows the stylus fluidly instead of moving on a grid. You can guide the snake using a stylus on the touchscreen. As the game gets harder and you have to guide the snake out of a gap, it is your own skill and precision that matters.</p>
+    <p><strong>Problem:</strong> The way the snake followed the mouse was the whole identity of the original Flash game. A grid-based snake would have been much easier to build but it would have been a completely different game. The movement had to be right.</p>
+    <p><strong>Solution:</strong> Each body segment is placed an exact fixed distance behind the one in front of it. I tested the touchscreen controls to make sure skilled players could guide the snake through any gaps.</p>
+    <img class="centered" src="images/snake2.png" alt="The snake game" loading="lazy">
+  </section>
+
+  <section>
+    <h2>Difficulty that builds itself</h2>
+    <p><strong>Result:</strong> The game gets harder without any levels, timers or enemies. Early play is relaxed as the snake is tiny but late play demands real precision as the player has to navigate around the snake's own body. This shift happens slowly as players eat apples.</p>
+    <p><strong>Problem:</strong> I wanted the game to have escalating tension but without adding artificial difficulty like countdown timers or enemies that would make it feel less like the original game.</p>
+    <p><strong>Solution:</strong> Every apple grows the snake so the player's own success shrinks the safe space on screen. As the player gets points they build their own danger. The only way to lose is by eating yourself which keeps every game over feeling fair as it can only happen due to a player's actions.</p>
+    <div class="image-row">
+      <img src="images/snake3.png" alt="The snake game" loading="lazy">
+      <img src="images/snakefail.png" alt="Game over screen showing score and best score" loading="lazy">
+    </div>
+  </section>
+
+  <!-- ============ ITERATION ============ -->
+  <section>
+    <h2>Iteration</h2>
+    <p>
+      The body movement went through some changes. My first approach was to let each segment of the snake drift toward the one ahead of it. 
+	  It looked fine with a short snake but as soon as the snake became long, the
+      tail couldn't keep up and there was visible gaps in the snakes body. Since precise controls are really important especially late game when the snake is bigger
+      it was the worst possible time for the visuals to be unreliable. I replaced it with exact placement so each body segment sits precisely a fixed distance behind the one in front. Once I had this perfected, there was no more glitching and the player could trust what they could see.
+    </p>
+    <div class="image-row">
+      <img src="images/snake2.png" alt="The snake game" loading="lazy">
+      <img src="images/snake3.png" alt="The snake game" loading="lazy">
+    </div>
+  </section>
+
+  <!-- ============ TAKEAWAYS ============ -->
+  <section>
+    <h2>What I learned</h2>
+    <p>
+      Taking time to debug and fix all of the visual and control issues I had with the snake was the right call. The silky smooth movement is essential to the game and I'm glad that it survived the port. Next time I'd put background music in the project.
+    </p>
+  </section>
 
   <div class="actions">
     <a class="btn" href="/">Back to all games</a>
