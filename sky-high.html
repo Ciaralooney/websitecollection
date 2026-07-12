@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sky High - Ciara Looney</title> 
+  <title>Sky High - Ciara Looney</title>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
@@ -28,25 +29,83 @@
 
   <!-- ============ HEADER ============ -->
   <h1 class="page-head">Sky High</h1>
- <div class="video-container">
-		  <iframe width="560" height="315" src="https://www.youtube.com/embed/04yKc0lYsok?si=6LVQEAtELDJgeHC8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-			</div>
-      <p>A 3D physics stacking game built in Unity. You can drag shapes and drop them to try build a stack as high as possible before it topples. Different shapes carry different risk and reward. Large and wide shapes are safer but score less points while thin unstable shapes are worth far more if you can stack them.</p>
-     <p>The full design report for this project, including the design pillars, audience, core gameplay breakdown and pacing decisions is available as a download further down this page.</p>
-	 
-		  <h2>Design</h2>
-      <p>I wanted to reward players who took risks so thinner pieces that are harder to stack will net players more points than safer larger pieces. Choosing a variety of pieces is also rewarded as the first time you choose a new shape you will get points that are multiplied by the amount of unique shapes you have. I worked carefully on the scoring system so the game rewards risk instead of building a tower with one shape.</p>
-      <p>Controls: The player chooses a shape form the tray. They drag the shape out and can choose the horizontal placement before dropping the piece, this felt more suited as the game isn't about speed its about deliberate choices.</p>
 
-	<h2>Downloads</h2>
-      <ul>
-        <li><a href="../downloads/Sky High Design Report.pdf">Design Report</a></li>
-      </ul>
-		  <div class="image-row">
-			<a href="/images/sky-high4.png"><img src="/images/sky-high4.png" alt="Sky High 1"></a>
-			<a href="/images/sky-high5.png"><img src="/images/sky-high5.png" alt="Sky High 2"></a>
-			<a href="/images/sky-high6.png"><img src="/images/sky-high6.png" alt="Sky High 3"></a>
-		</div>
+  <p>
+    Thia is a 3D physics stacking game. You drag shapes from a tray and stack them as high as you can until the tower topples. The most interesting design decision was the risk-reward scoring, the player is rewarded for choosing unstable shapes over stable ones. The player also gets extra points for having a variet of shapes in their stack instead of the same shape. These scoring rules were put in place to change how people play. Instead of always picking the safest shapes, players take risks as the rewards them for it.
+  </p>
+
+	<p class="meta"><strong>Genre:</strong> Physics, arcade</p>
+	<p class="meta"><strong>Engine:</strong> Unity</p>
+	<p class="meta"><strong>Team:</strong> Solo</p>
+	<p class="meta"><strong>My roles:</strong> Game Designer, Programmer</p>
+     <p class="meta"><strong>Status:</strong>Released</p>
+
+  <!-- Gameplay video -->
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/04yKc0lYsok?si=6LVQEAtELDJgeHC8" title="Sky High gameplay video" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+
+  <div class="actions">
+  <!--
+    <a class="btn" href="#">Play the build</a> -->
+    <a class="btn" href="#">Read the Design Report</a>
+  </div>
+
+  <!-- ============ DESIGN GOALS ============ -->
+  <section>
+    <h2>Design goals</h2>
+    <p>The core loop is risky stacking. I used Garneau's 14 Forms of Fun to pick the three types of
+      fun the game is built on and every design decision serves them.</p>
+    <ul>
+      <li>Application of an Ability: The player can choose where to drop the shape so they must precisely drag and drop shape to land neatly with the margin for error shrinking as the stack grows taller.</li>
+      <li>Thrill of Danger: Every placement carries a risk. The thin pieces are unstable and placing one makes it more likely the whole stack will topple.</li>
+      <li>Intellectual Problem Solving: The player must decide what shape to place and when. The player is always thinking of risk vs reward. </li>
+    </ul>
+  </section>
+  
+<section>
+  <h2>Risk-reward scoring</h2>
+  <p><strong>Result:</strong> Players stopped picking the safest shape each time and took risks it became the best way to get a higher score.</p>
+  <p><strong>Problem:</strong> When stacking items the most obvious thing to do is to place the biggest and most stable shape repeatedly. This isn't interesting and the game didn't do anyhting to punish this.</p>
+  <p><strong>Solution:</strong> I made the unstable shapes worth more points than stable ones and placing a thin piece low in the stack doubles its score if it stays balanced. Now each placement will have players thinking between safety and maxing their score.</p>
+  <div class="image-row">
+    <a href="images/sky-high4.png"><img src="images/sky-high4.png" alt="Sky High risk-reward stacking"></a>
+  </div>
+</section>
+
+<section>
+  <h2>Variety bonus</h2>
+  <p><strong>Result:</strong> Towers stopped being made of just one shape and were much more varied, it made each run play differently as players try new shapes and have to learn the different physics when stacking them.</p>
+  <p><strong>Problem:</strong> Even with a risk-reward scoring implemented a player could still find one shape they were good at balancing and just use that. The game didn't rewarded players from using a variety of shapes.</p>
+  <p><strong>Solution:</strong> The player earns a bonus the first time each new shape appears in the stack. So now a great way to increase your score is by trying to use every shape in the tray and finding a way to including the unstable ones too.</p>
+  <div class="image-row">
+    <a href="images/sky-high5.png"><img src="images/sky-high5.png" alt="Sky High shape tray"></a>
+  </div>
+</section>
+
+<!-- ============ ITERATION ============ -->
+<section>
+  <h2>Iteration</h2>
+  <p>
+    Early builds were completely grey with the default Unity skybox and a grey
+    floor. This was my first time making a 3D game. It worked but it looked unfinished. I added materials in Unity and coloured the floor brown and
+    the background yellow. This way the game feels like it takes place in a room. I added a tray at the side of the screen with each shape being a different colour. 
+	As my first 3D game the materials applied in Unity made a big difference visually for very little work.
+  </p>
+  <div class="image-row">
+    <a href="images/sky-high1.png"><img src="images/sky-high-old.png" alt="Early grey build"></a>
+    <a href="images/sky-high6.png"><img src="images/sky-high6.png" alt="Final coloured build"></a>
+  </div>
+</section>
+
+<!-- ============ TAKEAWAYS ============ -->
+<section>
+  <h2>What I learned</h2>
+  <p>
+    I learned that spending time on perfecting the scoring system did more for the game than any physics improvements could have. I'd keep
+    the approach of designing rules that fight players making boring choices. Next time I'd spend a lot more time on learning 3D modelling to have a more ploished looking game. 
+  </p>
+</section>
   <div class="actions">
     <a class="btn" href="/">Back to all games</a>
   </div>
