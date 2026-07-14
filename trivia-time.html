@@ -26,25 +26,42 @@
 </header>
 
 <main>
-
+<!-- ============ HEADER ============ -->
   <h1 class="page-head">Trivia Time</h1>
+  <p>Trivia Time is a true or false trivia game for the Yoto Player. When the card is inserted 10 random questions are picked and they are read out one at a time. This is an audio game that uses the Yoto's two physical buttons. A python server streams the audio live and keeps track of the players score.</p>
+  <p class="meta"><strong>Genre:</strong> Trivia game</p>
+  <p class="meta"><strong>Platform:</strong> Yoto Player</p>
+  <p class="meta"><strong>Team:</strong> Solo</p>
+  <p class="meta"><strong>My roles:</strong> Game Designer, Programmer</p>
+  <p class="meta"><strong>Status:</strong> Released</p>
+  <!-- Gameplay video -->
+  <div class="video">
+    <!-- Replace with YouTube vid -->
+  </div>
+  <div class="actions">
+    <a class="btn" href="../files/Trivia Time Design Report.pdf">Read the design report</a>
+    <a class="btn" href="https://github.com/Ciaralooney/Yoto-Interactive-Trivia-Card">View the code</a>
+  </div>
+  
+<section>
+  <h2>Working with the two buttons</h2>
+  <p><strong>Result:</strong> A device built for skipping tracks plays a real trivia game. The left button is false and the right is true. When they're press the game responds immediately to whichever you press and keeps track of the score in the background.</p>
+  <p><strong>Problem:</strong> The Yoto's buttons only move forward and backward through the tracks on a card. There's no way to setup the tracks on a card to have multiple options. This means it wasn't possible to ask a question and jump to two different tracks depending on the answer the player gives.</p>
+  <p><strong>Solution:</strong> Instead of relying on the card itself or the yoto website I setup a Python server that listens to live MQTT events from the player. It works out which button was pressed based on where the player lands, it updates the score based on what the player chose and then immediately overrides playback to send them to the right track.</p>
+  <img class="centered" src="../images/yoto_trivia1.png" alt="The Yoto Player running Trivia Time" loading="lazy">
+</section>
+<section>
+  <h2>Live audio</h2>
+  <p><strong>Result:</strong> Your score is read out with feedback as the game progresses. The ten random questions each game means no two playthroughs sound the same.</p>
+  <p><strong>Problem:</strong> Pre-recorded tracks couldn't dynamically read out the players score and give them feedback based on how they're doing.</p>
+  <p><strong>Solution:</strong> Questions and feedback are streamed in real time using a text to speech voice. The audio is generated live as you play. Ten questions per game felt like the right length, long enough to feel like a proper game but short enough that an 8 to 12 year old won't lose interest halfway through.</p>
+  <img class="centered" src="../images/yoto_trivia2.png" alt="Trivia Time card icons on the Yoto Player" loading="lazy">
+</section>
 
-		    <div class="video-container">
-		  <!-- Replace with YouTube embed once gameplay video is recorded -->
-			</div>
-      <p>A true or false trivia game for the Yoto Player. A Python server streams live audio to a physical card. When the card is inserted in the player 10 random questions are picked and they are read out one at a time. This is an audio game that uses the Yoto's two physical buttons and a voice asking the player questions.</p>
-      <p>The full design report for this project, including the design pillars, audience, core gameplay breakdown, and pacing decisions, is available as a download further down this page.</p>
-<h2>Design</h2>
-<p>The hardest part of this project wasn figuring out how to get real interactivity out of hardware that was never built for it. The Yoto's buttons only move forward and backward through the tracks on a card. They don't support jumping to two different places from one point. <img src="../images/yoto_trivia1.png" alt="Yoto Trivia 1" class="inline-image inline-image-right">So instead the server listens to live MQTT events from the player. It works out which button the player pressed based on where they land. It then immediately overrides playback to send them to the next question while keeping track of their score.</p>
-<p>Having the audio match the game mattered just as much as the logic. Questions and feedback are streamed in real time using a text to speech voice, so no two playthroughs ever sound quite the same.  
-	Ten questions per game felt like the right length, long enough to feel like a proper game but short enough that an 8 to 12 year old won't lose interest halfway through.</p>
-<p>You can view the code <a href="https://github.com/Ciaralooney/Yoto-Interactive-Trivia-Card">here</a> if you want to see how it works.</p>
-
-      <h2>Downloads</h2>
-      <ul>
-        <li><a href="../files/Trivia Time Design Report.pdf">Design Report</a></li>
-      </ul>
-
+<section>
+  <h2>What I learned</h2>
+  <p>The hardest part of this project was figuring out how to get real interactivity out of hardware that was never built for it. The Yoto's buttons only move forward and backward through the tracks on a card. They don't support jumping to two different places from one point. So after some research I found I could make a server that listens to live MQTT events from the player. It works out which button the player pressed based on where they land. It then immediately overrides playback to send them to the next question while keeping track of their score. Moving all the game logic to the server is what made the project possible at all.</p>
+</section>
 
   <div class="actions">
     <a class="btn" href="/">Back to all games</a>
