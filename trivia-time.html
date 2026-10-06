@@ -35,8 +35,9 @@
   <p class="meta"><strong>My roles:</strong> Game Designer, Programmer</p>
   <p class="meta"><strong>Status:</strong> Released</p>
   <!-- Gameplay video -->
-  <!-- <div class="video">
-  </div> -->
+  <div class="video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/xpwbT9gXkkc?si=2JI91Af0tMLQDilM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
   <div class="actions">
     <a class="btn" href="../files/Trivia Time Design Report.pdf">Read the design report</a>
     <a class="btn" href="https://github.com/Ciaralooney/Yoto-Interactive-Trivia-Card">View the code</a>
@@ -54,9 +55,10 @@
   <p><strong>Result:</strong> Your score is read out with feedback as the game progresses. The ten random questions each game means no two playthroughs sound the same.</p>
   <p><strong>Problem:</strong> Pre-recorded tracks couldn't dynamically read out the players score and give them feedback based on how they're doing.</p>
   <p><strong>Solution:</strong> Questions and feedback are streamed in real time using a text to speech voice. The audio is generated live as you play. Ten questions per game felt like the right length, long enough to feel like a proper game but short enough that an 8 to 12 year old won't lose interest halfway through.</p>
-  <img class="centered" src="../images/yoto_trivia2.png" style="max-width: 400px; width: 100%;" alt="Trivia Time card icons on the Yoto Player" loading="lazy">
 </section>
-
+  <div class="video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7A6ZN92UcJE?si=UQmrJPQm0_ZCn-ce" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
 <section>
   <h2>What I learned</h2>
   <p>The hardest part of this project was figuring out how to get real interactivity out of hardware that was never built for it. The Yoto's buttons only move forward and backward through the tracks on a card. They don't support jumping to two different places from one point. So after some research I found I could make a server that listens to live MQTT events from the player. It works out which button the player pressed based on where they land. It then immediately overrides playback to send them to the next question while keeping track of their score. Moving all the game logic to the server is what made the project possible at all.</p>
